@@ -66,7 +66,7 @@ span {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.2rem 15%;
+    padding: 1.2rem;
     background: var(--first-color);
     display: flex;
     justify-content: space-evenly;
@@ -75,7 +75,7 @@ span {
 }
 
     .header.stickyLine {
-        border-bottom: 0.2rem solid var(--text-color);
+        border-bottom: --0.5em solid var(--text-color);
     }
 
 .logo {
@@ -144,7 +144,7 @@ span {
     width: 6rem;
     height: 6rem;
     background: transparent;
-    border: 0.2rem solid var(--highlight-color);
+    border: --0.5em solid var(--highlight-color);
     border-radius: 50%;
     font-size: 3rem;
     margin-right: 2rem;
@@ -291,7 +291,7 @@ span {
     }
 
     .portfolio a {
-        border: 0.2rem solid var(--highlight-color);
+        border: --0.5em solid var(--highlight-color);
         margin: 4rem 2rem 0rem 2rem;
         transition: 0.5s ease;
     }
@@ -354,12 +354,30 @@ span {
 .portfolio-layer h4 {
     font-size: 2.5rem;
     color: white;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black,
+        -0.07em -0.07em black,
+        -0.07em 0.07em black,
+        0.07em -0.07em black,
+        0.07em 0.07em black;
 }
 
 .portfolio-layer p {
     font-size: 1.8rem;
     margin: 2rem 0 0;
     color: white;
+    text-shadow:
+        0.1em 0 black,
+        0 0.1em black,
+        -0.1em 0 black,
+        0 -0.1em black,
+        -0.1em -0.1em black,
+        -0.1em 0.1em black,
+        0.1em -0.1em black,
+        0.1em 0.1em black;
 }
 
 .portfolio-layer a {
@@ -512,7 +530,7 @@ span {
         padding: 1rem 3%;
         background: var(--first-color);
         border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        box-shadow: -0.5em 1rem rgba(0, 0, 0, 0.2);
         display: none;
     }
 
