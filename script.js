@@ -1,4 +1,4 @@
-// toggle light mode
+// toggle light / dark mode
 let lightModeIcon = document.querySelector('#light-mode-icon');
 
 lightModeIcon.onclick = function() {
