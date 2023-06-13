@@ -13,7 +13,7 @@
 
 :root {
     --first-color: #fafcff;
-    --second-color: #d9e5ff;
+    --second-color: #dfe9ff;
     --highlight-color: #1587ff;
     --text-color: #24282a;
     --background-color: linear-gradient(180deg, var(--first-color) 0%, var(--second-color) 100%);
@@ -97,13 +97,13 @@ span {
     }
 
 #menu-icon {
-    font-size: 3.6rem;
+    font-size: 4.6rem;
     color: var(--text-color);
     display: none;
 }
 
 #light-mode-icon {
-    font-size: 2.6rem;
+    font-size: 3rem;
     color: var(--text-color);
     cursor: pointer;
 }
