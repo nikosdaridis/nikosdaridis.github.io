@@ -1,6 +1,6 @@
 # Responsive portfolio website
 
-<img src ="https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/images/Readme.png" />
+<a href="nikosdaridis.github.io"><img src ="https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/images/Readme.png" /></a>
 
 This is my website to introduce myself, show my skills, portfolio and a way to contact me.
 
