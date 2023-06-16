@@ -57,16 +57,12 @@ const typed = new Typed('.multiple-text', {
 function SendMail() {
     var params = {
         from_name: document.getElementById("fullName").value,
-        email_id: document.getElementById("email_id").value,
+        email_id: document.getElementById("email").value,
         message: document.getElementById("message").value,
     }
 
-    if (params.from_name == "" || params.email_id == "" || params.message == "") {
-        alert("Please fill out the form");
-    } else {
-        emailjs.send("service_csks0d8", "template_iqmu12m", params)
-            .then(function (response) {
-                alert("Your message sent successfully!");
-            })
-    }
+    emailjs.send("service_csks0d8", "template_iqmu12m", params)
+        .then(function (response) {
+            alert("Your message sent successfully!");
+        })
 }
