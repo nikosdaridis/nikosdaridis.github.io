@@ -13,7 +13,7 @@
 
 :root {
     --first-color: #fafcff;
-    --second-color: #dfe9ff;
+    --second-color: #f4f8ff;
     --highlight-color: #1587ff;
     --text-color: #24282a;
     --background-color: linear-gradient(180deg, var(--first-color) 0%, var(--second-color) 100%);
@@ -22,7 +22,7 @@
 
 .dark-theme {
     --first-color: #24282a;
-    --second-color: #323d47;
+    --second-color: #2b353e;
     --highlight-color: #1587ff;
     --text-color: #fafcff;
     --background-color: linear-gradient(180deg, var(--first-color) 0%, var(--second-color) 100%);
@@ -304,24 +304,24 @@ span {
 
 .portfolio-container {
     display: grid;
-    gap: 10rem;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    gap: 6rem;
+    margin-left: 16vw;
+    margin-right: 16vw;
 }
 
 .portfolio-box {
     display: flex;
     justify-content: space-between;
+    gap: 4rem;
     height: 20vw;
-    gap: 5rem;
 }
 
 .portfolio-box-reverse {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    gap: 4rem;
     height: 20vw;
-    gap: 5rem;
+    flex-direction: row-reverse;
 }
 
 .portfolio-info {
@@ -357,7 +357,7 @@ span {
 }
 
 .portfolio-img:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
     box-shadow: none;
 }
 
@@ -440,6 +440,13 @@ span {
 
 
 /* Responsive Breakpoints */
+@media (max-width: 1600px) {
+    .portfolio-container {
+        margin-left: 12vw;
+        margin-right: 12vw;
+    }   
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -449,7 +456,14 @@ span {
         margin-left: 8vw;
         margin-right: 8vw;
     }
-    
+
+    .portfolio-box {
+        height: 25vw;
+    }
+
+    .portfolio-box-reverse {
+        height: 25vw;
+    } 
 }
 
 @media (max-width: 992px) {
@@ -467,11 +481,11 @@ span {
     }
 
     .portfolio-box {
-        height: 25vw;
+        height: 30vw;
     }
 
     .portfolio-box-reverse {
-        height: 25vw;
+        height: 30vw;
     }
 
     .contact {
@@ -521,11 +535,11 @@ span {
     }
 
     .portfolio-box {
-        height: 30vw;
+        height: 35vw;
     }
 
     .portfolio-box-reverse {
-        height: 30vw;
+        height: 35vw;
     }
 
     .portfolio-info h3 {
@@ -578,6 +592,10 @@ span {
 
     .portfolio-info h3 {
         font-size: 3rem;
+    }
+
+    .portfolio-img:hover {
+        transform: scale(1.1);
     }
 
     .contact form .input-box input {
