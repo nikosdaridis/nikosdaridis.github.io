@@ -56,12 +56,12 @@ const typed = new Typed('.multiple-text', {
 // Email.js
 function SendMail() {
     var params = {
-        from_name: document.getElementById("fullName").value,
-        email_id: document.getElementById("email").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
         message: document.getElementById("message").value,
     }
 
-    emailjs.send("service_csks0d8", "template_iqmu12m", params)
+    emailjs.send("service_csks0d8", "template_l4aoenf", params)
         .then(function (response) {
             alert("Your message sent successfully!");
         })
