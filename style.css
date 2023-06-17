@@ -18,6 +18,8 @@
     --text-color: #24282a;
     --background-color: linear-gradient(180deg, var(--first-color) 0%, var(--second-color) 100%);
     --second-background-color: linear-gradient(0deg, var(--first-color) 0%, var(--second-color) 100%);
+
+    .invert { filter: invert(100%);}
 }
 
 .dark-theme {
@@ -27,6 +29,8 @@
     --text-color: #fafcff;
     --background-color: linear-gradient(180deg, var(--first-color) 0%, var(--second-color) 100%);
     --second-background-color: linear-gradient(0deg, var(--first-color) 0%, var(--second-color) 100%);
+
+    .invert { filter: none;}
 }
 
 *::selection {
@@ -153,12 +157,11 @@ span {
     border: --0.5em solid var(--highlight-color);
     border-radius: 50%;
     background: var(--highlight-color);
-    color: var(--text-color);
+    color: #fafcff;
     box-shadow: 0 0 1rem var(--highlight-color);
     transition: 0.5s ease;
 }
     .button-links a:hover {
-        color: var(--first-color);
         box-shadow: none;
     }
 
@@ -170,13 +173,12 @@ span {
     letter-spacing: 0.1rem;
     font-weight: 600;
     background: var(--highlight-color);
-    color: var(--text-color);
+    color: #fafcff;
     box-shadow: 0 0 1rem var(--highlight-color);
     transition: 0.5s ease;
 }
 
     .btn:hover {
-        color: var(--first-color);
         box-shadow: none;
     }
 
@@ -221,19 +223,26 @@ span {
     }
 
     .about-card:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         box-shadow: 0 0 1rem var(--text-color);
     }
 
     .about-card-header {
-        background-color: var(--text-color);
-        color: var(--first-color);
+        color: var(--highlight-color);
+        border-bottom: 0.5rem solid var(--text-color);
     }
 
     .about-card-body {
-        color: var(--highlight-color);
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+
+    .about-card-body img {
+        width: 75px;
     }
 
 .portfolio {
@@ -436,6 +445,10 @@ span {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .portfolio {
+        padding-bottom: 10rem;
+    }
+
     .portfolio-content {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -453,7 +466,8 @@ span {
     }
 
     .contact {
-        min-height: auto;
+        min-height:max-content;
+        padding-bottom: 10rem;
     }
 
     .footer {
@@ -468,7 +482,7 @@ span {
 
     .home-content h1 {
         font-size: 6rem;
-    }    
+    }
 }
 
 @media (max-width: 640px) {
