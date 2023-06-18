@@ -1,24 +1,32 @@
-// toggle light / dark mode
-let lightModeIcon = document.querySelector('#light-mode-icon');
+const lightModeIcon = document.querySelector('#light-mode-icon');
+const button = document.getElementById("mailSendButton");
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const header = document.querySelector('header');
+let darkTheme = false;
 
-lightModeIcon.onclick = function() {
+// Toggle Light / Dark Mode
+lightModeIcon.onclick = function () {
+    darkTheme = !darkTheme;;
     lightModeIcon.classList.toggle('bxs-sun');
-    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle('dark-theme');
+
+    // Switch logos
+    if (darkTheme)
+        document.getElementById('github-logo').src = ('images/TechStack/GitHubWhite.png');
+    else
+        document.getElementById('github-logo').src = ('images/TechStack/GitHubBlack.png');
 }
 
-// toggle menu icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
+// Toggle Menu Econ Navbar
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
 
-// scroll sections active highlight
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
+// Scroll Sections Active Highlight
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -34,12 +42,10 @@ window.onscroll = () => {
         };
     });
 
-    // sticky navbar line
-    let header = document.querySelector('header');
-
+    // Sticky Navbar Line
     header.classList.toggle('stickyLine', window.scrollY > 500);
 
-    // remove toggle icon and navbar when click navbar link (scroll)
+    // Remove Toggle Icon And Navbar When Click Navbar Link
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
@@ -55,7 +61,7 @@ const typed = new Typed('.multiple-text', {
 
 // Email.js
 function SendMail() {
-    var params = {
+    let params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
@@ -63,6 +69,12 @@ function SendMail() {
 
     emailjs.send("service_csks0d8", "template_l4aoenf", params)
         .then(function (response) {
-            alert("Your message sent successfully!");
+            if (response.status == 200) {
+                button.innerText = "Message Sent Successfully";
+                setTimeout(() => button.innerText = "Send Message", 6000);
+            } else {
+                button.innerText = "Something Went Wrong, Try Again";
+                setTimeout(() => button.innerText = "Send Message", 6000);
+            }
         })
 }
