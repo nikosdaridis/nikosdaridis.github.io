@@ -5,28 +5,26 @@ const navbar = document.querySelector('.navbar');
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav a');
 const header = document.querySelector('header');
-let darkTheme = false;
+const contactForm = document.getElementById("contact-form");
+var darkTheme = false;
 
-// Toggle Light / Dark Mode
-lightModeIcon.onclick = function () {
+function ToggleLightDarkMode() {
     darkTheme = !darkTheme;;
     lightModeIcon.classList.toggle('bxs-sun');
     document.body.classList.toggle('dark-theme');
 }
 
-// Toggle Menu Econ Navbar
-menuIcon.onclick = () => {
+function ToggleMenuIcon() {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
 
-// Scroll Sections Active Highlight
-window.onscroll = () => {
-    sections.forEach(sec => {
+function ScrollActiveHighlight() {
+    sections.forEach(section => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+        let offset = section.offsetTop - 150;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
@@ -36,15 +34,11 @@ window.onscroll = () => {
         };
     });
 
-    // Navbar Line
     header.classList.toggle('navbarLine', window.scrollY > 200);
-
-    // Remove Toggle Icon And Navbar When Click Navbar Link
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
 
-// Typed.js
 const typed = new Typed('.multiple-text', {
     strings: ['Software Engineer', 'Game Developer'],
     typeSpeed: 100,
@@ -53,7 +47,6 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-// Email.js
 function SendMail() {
     let params = {
         name: document.getElementById("name").value,
@@ -65,10 +58,18 @@ function SendMail() {
         .then(function (response) {
             if (response.status == 200) {
                 button.innerText = "Message Sent Successfully";
-                setTimeout(() => button.innerText = "Send Message", 6000);
+                setTimeout(() => button.innerText = "Send Message", 5000);
             } else {
                 button.innerText = "Something Went Wrong, Try Again";
-                setTimeout(() => button.innerText = "Send Message", 6000);
+                setTimeout(() => button.innerText = "Send Message", 5000);
             }
         })
 }
+
+lightModeIcon.addEventListener("click", ToggleLightDarkMode);
+menuIcon.addEventListener("click", ToggleMenuIcon);
+document.addEventListener("scroll", ScrollActiveHighlight);
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    SendMail();
+});
