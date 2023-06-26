@@ -74,7 +74,7 @@ span {
     z-index: 100;
 }
 
-.header.stickyLine {
+.header.navbarLine {
     border-bottom: 0.2rem solid var(--highlight-color);
 }
 
@@ -135,11 +135,7 @@ span {
 .links {
     display: flex;
     margin: 3rem 2rem 3rem 0;
-    gap: 6rem;
-}
-
-.links .btn {
-    align-self: center;
+    gap: 3rem;
 }
 
 .button-links a {
@@ -209,11 +205,11 @@ span {
     display: grid;
     justify-items: center;
     margin: 0rem 15rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .about-card {
-    width: 250px;
+    width: 300px;
     box-shadow: 0 0 1rem var(--highlight-color);
     text-align: center;
     transition: 0.3s ease;
@@ -267,14 +263,14 @@ span {
 }
 
 .portfolio-info-box h4 {
-    font-size: 2rem;
-    font-weight: 450;
-    margin-bottom: 6rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
 
 .portfolio-info-box p {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
 }
 
 .portfolio-image-box {
@@ -406,7 +402,7 @@ span {
     }
 
     .about-card {
-        width: 220px;
+        width: 250px;
     }
 
     .portfolio-content {
@@ -453,10 +449,23 @@ span {
 
     .portfolio-info-box {
         justify-self: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .portfolio-info-box p {
+        margin-bottom: 2rem;
     }
 
     .portfolio-image-box {
         justify-self: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .portfolio-image-box img {
+        width: 300px;
+        height: 300px;
     }
 
     .portfolio-image-box img:hover {
@@ -516,6 +525,77 @@ span {
 }
 
 @media (max-width: 365px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.8rem;
+    }
+
+    .links {
+        display: grid;
+    }
+
+    .links .btn {
+        justify-self: center;
+    }
+
+    .button-links {
+        display: inline-flex;
+        justify-self: center;
+        gap: 3rem;
+    }
+
+    .button-links a {
+        margin: 0;
+    }
+
+    .about-content p {
+        margin: 0rem 1rem 5rem;
+    }
+
+    .about-card {
+        width: 220px;
+    }
+
+    .portfolio-info-box {
+        justify-self: center;
+        width: 250px;
+        height: 250px;
+    }
+
+    .portfolio-info-box h3 {
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-info-box h4 {
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-info-box p {
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-image-box {
+        justify-self: center;
+        width: 250px;
+        height: 250px;
+    }
+
+    .portfolio-image-box img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .portfolio-image-box img:hover {
+        transform: scale(1.1);
+    }
 
     .footer {
         flex-direction: column-reverse;

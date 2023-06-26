@@ -12,12 +12,6 @@ lightModeIcon.onclick = function () {
     darkTheme = !darkTheme;;
     lightModeIcon.classList.toggle('bxs-sun');
     document.body.classList.toggle('dark-theme');
-
-    // Switch logos
-    if (darkTheme)
-        document.getElementById('github-logo').src = ('images/TechStack/GitHubWhite.png');
-    else
-        document.getElementById('github-logo').src = ('images/TechStack/GitHubBlack.png');
 }
 
 // Toggle Menu Econ Navbar
@@ -42,8 +36,8 @@ window.onscroll = () => {
         };
     });
 
-    // Sticky Navbar Line
-    header.classList.toggle('stickyLine', window.scrollY > 500);
+    // Navbar Line
+    header.classList.toggle('navbarLine', window.scrollY > 200);
 
     // Remove Toggle Icon And Navbar When Click Navbar Link
     menuIcon.classList.remove('bx-x');
