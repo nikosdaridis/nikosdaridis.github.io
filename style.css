@@ -359,7 +359,7 @@ span {
     align-items: center;
     padding: 0.8rem;
     margin: 1.5rem;
-    color: var(--text-color);
+    color: #fafcff;
     background: var(--highlight-color);
     box-shadow: 0 0 1rem var(--highlight-color);
     border-radius: 0.8rem;
@@ -367,7 +367,6 @@ span {
 }
 
 .footer-icons a:hover {
-    color: var(--first-color);
     box-shadow: none;
 }
 
