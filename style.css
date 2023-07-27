@@ -16,23 +16,7 @@
   --second-color: #f4f8ff;
   --highlight-color: #1587ff;
   --text-color: #24282a;
-  --background-color: linear-gradient(
-    180deg,
-    var(--first-color) 0%,
-    var(--second-color) 100%
-  );
-  --second-background-color: linear-gradient(
-    0deg,
-    var(--first-color) 0%,
-    var(--second-color) 100%
-  );
-}
 
-.dark-theme {
-  --first-color: #24282a;
-  --second-color: #2b353e;
-  --highlight-color: #1587ff;
-  --text-color: #fafcff;
   --background-color: linear-gradient(
     180deg,
     var(--first-color) 0%,

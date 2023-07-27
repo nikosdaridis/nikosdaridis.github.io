@@ -1,25 +1,33 @@
+const root = document.querySelector(":root");
 const lightModeIcon = document.querySelector("#light-mode-icon");
-const button = document.querySelector("#mailSendButton");
+const mailSendButton = document.querySelector("#mailSendButton");
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 const header = document.querySelector("header");
 const contactForm = document.querySelector("#contact-form");
-var darkTheme = false;
 
-function ToggleLightDarkMode() {
-  darkTheme = !darkTheme;
-  lightModeIcon.classList.toggle("bxs-sun");
-  document.body.classList.toggle("dark-theme");
+setLightDarkMode(localStorage.getItem("lightDarkMode"));
+
+function setLightDarkMode(mode) {
+  if (mode === "dark") {
+    localStorage.setItem("lightDarkMode", "dark");
+    root.style.setProperty("--first-color", "#24282a");
+    root.style.setProperty("--second-color", "#2b353e");
+    root.style.setProperty("--text-color", "#fafcff");
+    lightModeIcon.setAttribute("class", "bx bxs-sun");
+  } else {
+    // default set light
+    localStorage.setItem("lightDarkMode", "light");
+    root.style.setProperty("--first-color", "#fafcff");
+    root.style.setProperty("--second-color", "#f4f8ff");
+    root.style.setProperty("--text-color", "#24282a");
+    lightModeIcon.setAttribute("class", "bx bxs-moon");
+  }
 }
 
-function ToggleMenuIcon() {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-}
-
-function ScrollActiveHighlight() {
+function scrollActiveHighlight() {
   sections.forEach((section) => {
     let top = window.scrollY;
     let offset = section.offsetTop - 150;
@@ -49,7 +57,7 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-function SendMail() {
+function sendMail() {
   let params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
@@ -58,21 +66,27 @@ function SendMail() {
 
   emailjs
     .send("service_csks0d8", "template_l4aoenf", params)
-    .then(function (response) {
-      if (response.status == 200) {
-        button.innerText = "Message sent successfully";
-        setTimeout(() => (button.textContent = "Send Message"), 5000);
-      } else {
-        button.innerText = "There was an error. Try again later";
-        setTimeout(() => (button.textContent = "Send Message"), 5000);
-      }
+    .then(function (res) {
+      mailSendButton.textContent = `${
+        res.status === 200
+          ? "Message sent successfully"
+          : "There was an error. Try again later"
+      }`;
+      setTimeout(() => (mailSendButton.textContent = "Send Message"), 5000);
     });
 }
 
-lightModeIcon.addEventListener("click", ToggleLightDarkMode);
-menuIcon.addEventListener("click", ToggleMenuIcon);
-document.addEventListener("scroll", ScrollActiveHighlight);
+lightModeIcon.addEventListener("click", function () {
+  localStorage.getItem("lightDarkMode") === "light"
+    ? setLightDarkMode("dark")
+    : setLightDarkMode("light");
+});
+menuIcon.addEventListener("click", function () {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+});
+document.addEventListener("scroll", scrollActiveHighlight);
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  SendMail();
+  sendMail();
 });
