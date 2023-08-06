@@ -1,5 +1,10 @@
-# Responsive portfolio website
+<h2 align="center">Portfolio Website</h2>
 
-<a href="https://nikosdaridis.github.io/"><img src ="https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/images/Readme.png" /></a>
+> v2 - <a href="https://daridis.com">Soon</a> - React, Tailwind CSS
+> v1 - <a href="https://daridis.com/v1">Live</a> - HTML, CSS, Javascript
 
-This is my website to introduce myself, show my skills, portfolio and a way to contact me.
+---
+
+### Screenshot
+
+<a href="https://daridis.com"><img width="800" alt="" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/images/Readme.png></a>

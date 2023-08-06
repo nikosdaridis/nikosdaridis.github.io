@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nikos Daridis Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#home"><img src="images/Logo.png" class="logo" /></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <i class="bx bxs-moon" id="light-mode-icon"></i>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I'm</h3>
+        <h1>Nikos Daridis</h1>
+        <h3>A <span class="multiple-text"></span></h3>
+        <div class="links">
+          <a href="#portfolio" class="btn">View Portfolio</a>
+          <div class="button-links">
+            <a href="https://github.com/nikosdaridis" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/nikosdaridis/" target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <h2 class="heading">About <span>Me</span></h2>
+
+      <div class="about-content">
+        <p>
+          I’m a software engineer and game developer based in Athens, Greece. I
+          have done work in software development, video game development and
+          front-end/back-end web. I love to learn new technologies and show my
+          creative approach to software engineering through my projects.
+        </p>
+      </div>
+
+      <h3>Tech Stack</h3>
+
+      <!-- Languages -->
+      <div class="about-card-content">
+        <div class="about-card">
+          <div class="about-card-header">
+            <h4>Languages</h4>
+          </div>
+          <div class="about-card-body">
+            <img
+              src="images/TechStack/JavaScript.png"
+              alt="JavaScript"
+              title="JavaScript"
+            />
+            <img src="images/TechStack/CSharp.png" alt="C#" title="C#" />
+          </div>
+        </div>
+
+        <!-- Technologies -->
+        <div class="about-card">
+          <div class="about-card-header">
+            <h4>Technologies</h4>
+          </div>
+          <div class="about-card-body">
+            <img src="images/TechStack/React.png" alt="React" title="React" />
+            <img
+              src="images/TechStack/TailwindCSS.png"
+              alt="Tailwind CSS"
+              title="Tailwind CSS"
+            />
+            <img src="images/TechStack/HTML.png" alt="HTML" title="HTML" />
+            <img src="images/TechStack/CSS.png" alt="CSS" title="CSS" />
+            <img src="images/TechStack/DOTNET.png" alt=".NET" title=".NET" />
+            <img src="images/TechStack/Unity.png" alt="Unity" title="Unity" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Portfolio</h2>
+
+      <div class="portfolio-content">
+        <!-- ColorPal -->
+        <div class="portfolio-info-box">
+          <h3>ColorPal</h3>
+          <p>
+            Chrome extension color tool to extract any pixel from the screen,
+            pick any color from a palette and save favorite colors
+          </p>
+          <h4>Tech Stack: <span>HTML, CSS, JavaScript</span></h4>
+          <div class="button-links">
+            <a href="https://github.com/nikosdaridis/colorpal" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad"
+              target="_blank"
+              ><i class="bx bxs-download"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-image-box">
+          <img
+            src="images/Portfolio/ColorPal.jpg"
+            alt="ColorPal"
+            title="ColorPal"
+          />
+        </div>
+
+        <!-- Website -->
+        <div class="portfolio-info-box">
+          <h3>Portfolio</h3>
+          <p>Responsive minimalist one page portfolio website</p>
+          <h4>Tech Stack: <span>HTML, CSS, JavaScript</span></h4>
+          <div class="button-links">
+            <a
+              href="https://github.com/nikosdaridis/nikosdaridis.github.io"
+              target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-image-box">
+          <img
+            src="images/Portfolio/Portfolio.jpg"
+            alt="Website"
+            title="Website"
+          />
+        </div>
+
+        <!-- Project Souls -->
+        <div class="portfolio-info-box">
+          <h3>Project Souls</h3>
+          <p>Tech demo clone of Dark Souls</p>
+          <h4>Tech Stack: <span>C#, Unity</span></h4>
+          <div class="button-links">
+            <a
+              href="https://github.com/nikosdaridis/project-souls"
+              target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://nikosdaridis.itch.io/project-souls" target="_blank"
+              ><i class="bx bxs-download"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-image-box">
+          <img
+            src="images/Portfolio/ProjectSouls.jpg"
+            alt="Project Souls"
+            title="Project Souls"
+          />
+        </div>
+
+        <!-- 2D Bezier Path Tool -->
+        <div class="portfolio-info-box">
+          <h3>2D Bezier Path Tool</h3>
+          <p>Unity editor tool to create and edit 2d bezier paths</p>
+          <h4>Tech Stack: <span>C#, Unity</span></h4>
+          <div class="button-links">
+            <a
+              href="https://github.com/nikosdaridis/2d-bezier-path-tool"
+              target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-image-box">
+          <img
+            src="images/Portfolio/2DBezierPathTool.jpg"
+            alt="2D Bezier Path Tool"
+            title="2D Bezier Path Tool"
+          />
+        </div>
+
+        <!-- Space Cowboys -->
+        <div class="portfolio-info-box">
+          <h3>Space Cowboys</h3>
+          <p>2d multiplayer fighting game</p>
+          <h4>Tech Stack: <span>C#, Unity</span></h4>
+          <div class="button-links">
+            <a
+              href="https://github.com/nikosdaridis/space-cowboys"
+              target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://nikosdaridis.itch.io/space-cowboys" target="_blank"
+              ><i class="bx bxs-download"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="portfolio-image-box">
+          <img
+            src="images/Portfolio/SpaceCowboys.jpg"
+            alt="Space Cowboys"
+            title="Space Cowboys"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form id="contact-form">
+        <div class="input-box">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <textarea
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Message"
+          required
+        ></textarea>
+        <button type="submit" class="btn" id="mailSendButton" name="submit">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Created by <span>Nikos Daridis </span>| 2023</p>
+      </div>
+
+      <div class="footer-icons">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Email.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("tkKxnFTTTampSyr3G");
+      })();
+    </script>
+
+    <!-- Custom js -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
