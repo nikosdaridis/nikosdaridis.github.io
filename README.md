@@ -8,4 +8,4 @@
 
 ### Screenshot
 
-<a href="https://daridis.com"><img width="800" alt="" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/images/Readme.png></a>
+<a href="https://daridis.com"><img width="800" alt="" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/Screenshot.jpg></a>

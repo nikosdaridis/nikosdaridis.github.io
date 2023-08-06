@@ -27,6 +27,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         to="home"
+        offset={-60}
         smooth={true}
         duration={400}
         className="z-10 cursor-pointer"
@@ -39,6 +40,7 @@ export default function Navbar() {
       <nav className="hidden text-lg font-semibold md:flex">
         <Link
           to="home"
+          offset={-60}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -118,6 +120,7 @@ export default function Navbar() {
       >
         <Link
           to="home"
+          offset={-60}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
