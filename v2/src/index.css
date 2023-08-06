@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+  :root[theme="dark"] {
+    --color-primary: 200deg 8% 15%;
+    --color-secondary: 208deg 18% 21%;
+    --color-highlight: 211deg 100% 54%;
+    --color-text: 216deg 100% 99%;
+  }
+
+  :root[theme="light"] {
+    --color-primary: 216deg 100% 99%;
+    --color-secondary: 218deg 100% 98%;
+    --color-highlight: 211deg 100% 54%;
+    --color-text: 200deg 8% 15%;
+  }
+
+  body {
+    @apply font-[Poppins];
+  }
+}
+
+.project {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5%;
+}
+
+.project:hover {
+  background-image: radial-gradient(
+    circle,
+    rgb(20, 134, 255) 0%,
+    rgb(17, 115, 219) 100%
+  ) !important;
+}

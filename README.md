@@ -1,7 +1,8 @@
 <h2 align="center">Portfolio Website</h2>
 
-> v2 - <a href="https://daridis.com">Soon</a> - React, Tailwind CSS
-> v1 - <a href="https://daridis.com/v1">Live</a> - HTML, CSS, Javascript
+> v2 - <a href="https://daridis.com">Website</a> - React, Tailwind CSS
+> </br>
+> v1 - <a href="https://daridis.com/v1">Website</a> - HTML, CSS, Javascript
 
 ---
 
