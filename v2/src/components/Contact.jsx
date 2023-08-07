@@ -35,11 +35,11 @@ export default function Contact() {
   return (
     <section
       name="contact"
-      className="flex h-screen w-full items-center justify-center bg-gradient-to-b from-secondary to-primary p-4 text-center"
+      className="flex h-screen min-h-[750px] w-full items-center justify-center bg-gradient-to-b from-secondary to-primary p-4 text-center"
     >
       {/* Container */}
       <form
-        className="w-[40rem] text-center"
+        className="max-w-fit text-center"
         ref={form}
         onSubmit={(e) => handleSubmit(e)}
       >
@@ -67,7 +67,7 @@ export default function Contact() {
           className="w-full rounded-lg border-2 border-highlight bg-primary p-4 text-text"
           placeholder="Message"
           name="message"
-          cols="30"
+          cols="70"
           rows="10"
           required
         ></textarea>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "/Logo.png";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
@@ -23,7 +23,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed z-10 flex h-[60px] w-full items-center justify-between bg-primary px-[2rem] text-text sm:px-[6rem] md:px-[8rem] lg:px-[14rem] xl:px-[20rem] 2xl:px-[26rem]">
+    <header className="fixed z-10 flex h-[60px] w-full items-center justify-between bg-primary px-[1rem] text-text 2sm:px-[3rem] sm:px-[5rem] md:px-[7rem] lg:px-[9rem] xl:px-[12rem] 2xl:px-[16rem]">
       {/* Logo */}
       <Link
         to="home"

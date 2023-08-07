@@ -1,24 +1,24 @@
 import Project from "./Project";
-import ColorPal from "../assets/Portfolio/ColorPal.jpg";
-import PortfolioImage from "../assets/Portfolio/Portfolio.jpg";
-import ProjectSouls from "../assets/Portfolio/ProjectSouls.jpg";
-import BezierPathTool from "../assets/Portfolio/2DBezierPathTool.jpg";
-import SpaceCowboys from "../assets/Portfolio/SpaceCowboys.jpg";
+import ColorPal from "/Portfolio/ColorPal.jpg";
+import PortfolioImage from "/Portfolio/Portfolio.jpg";
+import ProjectSouls from "/Portfolio/ProjectSouls.jpg";
+import BezierPathTool from "/Portfolio/2DBezierPathTool.jpg";
+import SpaceCowboys from "/Portfolio/SpaceCowboys.jpg";
 
 export default function Portfolio() {
   return (
     <section
       name="portfolio"
-      className="h-full w-full bg-gradient-to-b from-primary to-secondary text-text 2xl:h-screen"
+      className="h-max min-h-screen w-full bg-gradient-to-b from-primary to-secondary text-text"
     >
       {/* Container */}
-      <div className="mx-auto flex h-full w-full max-w-[1000px] flex-col justify-center p-4 text-center">
+      <div className="mx-auto flex h-full w-full max-w-fit flex-col justify-center p-4 text-center">
         <h2 className="inline pb-8 text-4xl font-bold text-text lg:text-6xl">
           Portfolio
         </h2>
 
         {/* Projects Container */}
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 xl:gap-24">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 sm:gap-12 md:gap-16 lg:grid-cols-3 xl:gap-24">
           <Project
             imageSrc={ColorPal}
             techStack={"JavaScript, HTML, CSS"}

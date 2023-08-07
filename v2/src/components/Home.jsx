@@ -27,22 +27,22 @@ export default function Home() {
       className="h-screen w-full bg-gradient-to-b from-primary to-secondary"
     >
       {/* Container */}
-      <div className="mx-auto flex h-full max-w-[1000px] flex-col items-center justify-center">
+      <div className="mx-auto flex h-full max-w-fit flex-col items-center justify-center">
         {/* Name and typed */}
         <div>
-          <h2 className="my-1 text-xl font-bold text-text sm:text-2xl lg:my-4 lg:text-4xl 2xl:text-5xl">
+          <h2 className="my-1 text-xl font-bold text-text 2sm:text-3xl sm:text-5xl lg:my-4 lg:text-5xl">
             Hello, I'm
           </h2>
-          <h1 className="my-1 text-3xl font-bold text-text sm:text-5xl lg:my-4 lg:text-6xl xl:text-7xl 2xl:text-8xl">
+          <h1 className="2xl:text-10xl my-1 text-3xl font-bold text-text 2sm:text-5xl sm:text-7xl lg:my-4 lg:text-8xl">
             Nikos Daridis
           </h1>
-          <h2 className="max-w-[700px] text-[1rem] font-bold text-text sm:text-2xl lg:text-4xl 2xl:text-5xl">
+          <h2 className="max-w-[700px] text-[1rem] font-bold text-text 2sm:text-3xl sm:text-4xl lg:text-5xl">
             A <span className="text-highlight" ref={typedElem} />
           </h2>
         </div>
 
         {/* Buttons */}
-        <div className="mt-8 grid cursor-pointer grid-cols-1 place-items-center gap-4 sm:flex lg:gap-8">
+        <div className="mt-8 grid cursor-pointer grid-cols-1 place-items-center gap-4 2sm:flex lg:gap-8">
           <Link
             to="portfolio"
             offset={-60}
