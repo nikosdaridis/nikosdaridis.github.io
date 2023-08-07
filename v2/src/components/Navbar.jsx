@@ -23,7 +23,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed z-10 flex h-[60px] w-full items-center justify-between bg-primary px-[1rem] text-text 2sm:px-[3rem] sm:px-[5rem] md:px-[7rem] lg:px-[9rem] xl:px-[12rem] 2xl:px-[16rem]">
+    <header className="fixed z-10 flex h-[60px] w-full items-center justify-evenly bg-primary text-text">
       {/* Logo */}
       <Link
         to="home"
@@ -76,6 +76,7 @@ export default function Navbar() {
 
         <Link
           to="contact"
+          offset={-60}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -153,6 +154,7 @@ export default function Navbar() {
 
         <Link
           to="contact"
+          offset={-60}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}

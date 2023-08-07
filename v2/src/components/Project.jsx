@@ -23,14 +23,14 @@ export default function Project({
         <div className="mt-2 text-center sm:mt-4 lg:mt-6">
           {liveLink !== null && (
             <a href={liveLink} target="_blank" rel="noreferrer">
-              <button className="m-1 whitespace-nowrap rounded-lg bg-[#fafcff] p-1 text-xs font-semibold text-gray-800 hover:bg-gray-300 sm:m-2 sm:text-sm md:py-2 lg:m-4 lg:text-lg">
+              <button className="m-1 hidden whitespace-nowrap rounded-lg bg-[#fafcff] p-1 text-xs font-semibold text-gray-800 hover:bg-gray-300 group-hover:inline sm:m-2 sm:text-sm md:py-2 lg:m-4 lg:text-lg">
                 {liveName}
               </button>
             </a>
           )}
           {githubLink !== null && (
             <a href={githubLink} target="_blank" rel="noreferrer">
-              <button className="m-1 whitespace-nowrap rounded-lg bg-[#fafcff] p-1 text-xs font-semibold text-gray-800 hover:bg-gray-300 sm:m-2 sm:text-sm md:py-2 lg:m-4 lg:text-lg">
+              <button className="m-1 hidden whitespace-nowrap rounded-lg bg-[#fafcff] p-1 text-xs font-semibold text-gray-800 hover:bg-gray-300 group-hover:inline sm:m-2 sm:text-sm md:py-2 lg:m-4 lg:text-lg">
                 GitHub
               </button>
             </a>

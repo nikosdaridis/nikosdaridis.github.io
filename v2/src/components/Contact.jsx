@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section
       name="contact"
-      className="flex h-screen min-h-[750px] w-full items-center justify-center bg-gradient-to-b from-secondary to-primary p-4 text-center"
+      className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-to-b from-secondary to-primary p-4 text-center"
     >
       {/* Container */}
       <form
