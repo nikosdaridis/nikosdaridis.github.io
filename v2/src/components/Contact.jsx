@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [contactResultMessage, setContactResultMessage] = useState("");
+  const [messageResult, setMessageResult] = useState("");
 
   const form = useRef();
 
@@ -19,7 +19,7 @@ export default function Contact() {
         "tkKxnFTTTampSyr3G",
       )
       .then((result) => {
-        setContactResultMessage(
+        setMessageResult(
           result.status === 200
             ? "Message sent successfully"
             : "There was an error. Try again later",
@@ -27,7 +27,7 @@ export default function Contact() {
 
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-          setContactResultMessage("");
+          setMessageResult("");
         }, 5000);
       });
   }
@@ -47,34 +47,48 @@ export default function Contact() {
           Contact <span className="text-highlight">Me</span>
         </h2>
 
+        {/* Name and Email */}
         <div className="mb-3 mt-20 flex flex-wrap justify-between">
           <input
-            className="w-[49%] rounded-lg border-2 border-highlight bg-primary p-4 text-text"
+            className="w-[49%] rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
             type="text"
             placeholder="Name"
             name="name"
             required
           />
           <input
-            className="w-[49%] rounded-lg border-2 border-highlight bg-primary p-4 text-text"
+            className="w-[49%] rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
             type="email"
             placeholder="Email"
             name="email"
             required
           />
         </div>
+
+        {/* Message */}
         <textarea
-          className="w-full rounded-lg border-2 border-highlight bg-primary p-4 text-text"
+          className="w-full rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
           placeholder="Message"
           name="message"
           cols="70"
           rows="10"
           required
-        ></textarea>
-        <h3 className="mb-[-1rem] mt-2 text-text">{contactResultMessage}</h3>
+        />
+
+        <p
+          className={
+            messageResult.includes("successfully")
+              ? "mb-[-1rem] mt-4 text-green-500"
+              : "mb-[-1rem] mt-4 text-red-500"
+          }
+        >
+          {messageResult}
+        </p>
+
+        {/* Button */}
         <button
           className={
-            contactResultMessage
+            messageResult
               ? "hidden"
               : "mx-auto my-8 flex items-center rounded-lg border-2 border-highlight px-4 py-3 text-text hover:bg-highlight"
           }

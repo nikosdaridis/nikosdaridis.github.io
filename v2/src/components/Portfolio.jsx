@@ -5,6 +5,10 @@ import ProjectSouls from "/Portfolio/ProjectSouls.jpg";
 import BezierPathTool from "/Portfolio/2DBezierPathTool.jpg";
 import SpaceCowboys from "/Portfolio/SpaceCowboys.jpg";
 
+import { FaGithub, FaChrome } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
+import { BsDownload } from "react-icons/bs";
+
 export default function Portfolio() {
   return (
     <section
@@ -17,57 +21,104 @@ export default function Portfolio() {
           Portfolio
         </h2>
 
-        {/* Projects Container */}
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 sm:gap-12 md:gap-16 lg:grid-cols-3 xl:gap-24">
+        {/* Projects Grid */}
+        <div className="mx-3 grid grid-cols-1 gap-16 py-8 text-center 2sm:mx-6 sm:gap-8 sm:gap-y-[4rem] md:grid-cols-2 xl:grid-cols-3">
           <Project
             imageSrc={ColorPal}
-            techStack={"JavaScript, HTML, CSS"}
-            liveName={"Web Store"}
-            liveLink={
-              "https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad"
-            }
-            githubLink={"https://github.com/nikosdaridis/colorpal"}
+            description="Chrome extension color tool to extract any pixel from the screen, pick any color from a palette and save favorite colors"
+            techStack="JavaScript, HTML, CSS"
+            buttons={[
+              {
+                name: "Web Store",
+                image: FaChrome,
+                link: "https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
+              },
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/colorpal",
+              },
+            ]}
           >
             ColorPal
           </Project>
 
           <Project
             imageSrc={PortfolioImage}
-            techStack={"React, Tailwind CSS"}
-            liveName={"Website"}
-            liveLink={"https://daridis.com"}
-            githubLink={
-              "https://github.com/nikosdaridis/nikosdaridis.github.io"
-            }
+            description="Responsive minimalist one page portfolio website"
+            techStack="React, Tailwind CSS"
+            buttons={[
+              {
+                name: "Website v2",
+                image: TbWorldWww,
+                link: "https://daridis.com",
+              },
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/nikosdaridis.github.io",
+              },
+              {
+                name: "Website v1",
+                image: TbWorldWww,
+                link: "https://nikosdaridis.github.io/v1",
+              },
+            ]}
           >
             Portfolio v2
           </Project>
 
           <Project
             imageSrc={ProjectSouls}
-            techStack={"C#, Unity"}
-            liveName={"Download"}
-            liveLink={"https://nikosdaridis.itch.io/project-souls"}
-            githubLink={"https://github.com/nikosdaridis/project-souls"}
+            description="Tech demo clone of Dark Souls"
+            techStack="C#, Unity"
+            buttons={[
+              {
+                name: "Download",
+                image: BsDownload,
+                link: "https://nikosdaridis.itch.io/project-souls",
+              },
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/project-souls",
+              },
+            ]}
           >
             Project Souls
           </Project>
 
           <Project
             imageSrc={BezierPathTool}
-            techStack={"C#, Unity"}
-            liveLink={null}
-            githubLink={"https://github.com/nikosdaridis/2d-bezier-path-tool"}
+            description="Unity editor tool to create and edit 2d bezier paths"
+            techStack="C#, Unity"
+            buttons={[
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/2d-bezier-path-tool",
+              },
+            ]}
           >
             2D Bezier Path Tool
           </Project>
 
           <Project
             imageSrc={SpaceCowboys}
-            techStack={"C#, Unity"}
-            liveName={"Download"}
-            liveLink={"https://nikosdaridis.itch.io/space-cowboys"}
-            githubLink={"https://github.com/nikosdaridis/space-cowboys"}
+            description="2d multiplayer fighting game"
+            techStack="C#, Unity"
+            buttons={[
+              {
+                name: "Download",
+                image: BsDownload,
+                link: "https://nikosdaridis.itch.io/space-cowboys",
+              },
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/space-cowboys",
+              },
+            ]}
           >
             Space Cowboys
           </Project>

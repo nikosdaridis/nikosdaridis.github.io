@@ -23,18 +23,3 @@
     @apply font-[Poppins];
   }
 }
-
-.project {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5%;
-}
-
-.project:hover {
-  background-image: radial-gradient(
-    circle,
-    rgb(20, 134, 255) 0%,
-    rgb(17, 115, 219) 100%
-  ) !important;
-}

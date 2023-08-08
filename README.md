@@ -1,11 +1,11 @@
 <h2 align="center">Portfolio Website</h2>
 
-> v2 - <a href="https://daridis.com">Website</a> - React, Tailwind CSS
+> <a href="https://daridis.com">v2</a> - React, Tailwind CSS
 > </br>
-> v1 - <a href="https://daridis.com/v1">Website</a> - HTML, CSS, Javascript
+> <a href="https://nikosdaridis.github.io/v1">v1</a> - HTML, CSS, Javascript
 
 ---
 
 ### Screenshot
 
-<a href="https://daridis.com"><img width="800" alt="" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/Screenshot.jpg></a>
+<a href="https://daridis.com"><img width="600" alt="" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/Screenshot.jpg></a>

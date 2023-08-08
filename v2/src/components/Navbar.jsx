@@ -1,26 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Logo from "/Logo.png";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
-const htmlElem = document.getElementsByTagName("html")[0];
-
-export default function Navbar() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("nd-theme") ?? "dark",
-  );
+export default function Navbar({ theme, onClickThemeIcon }) {
   const [hamburger, setHamburger] = useState(false);
-
-  useEffect(() => {
-    handleTheme(localStorage.getItem("nd-theme") ?? "dark");
-  }, []);
-
-  function handleTheme(theme) {
-    setTheme(theme);
-    localStorage.setItem("nd-theme", theme);
-    htmlElem.setAttribute("theme", theme);
-  }
 
   return (
     <header className="fixed z-10 flex h-[60px] w-full items-center justify-evenly bg-primary text-text">
@@ -76,7 +61,7 @@ export default function Navbar() {
 
         <Link
           to="contact"
-          offset={-60}
+          offset={0}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -99,7 +84,7 @@ export default function Navbar() {
       <div
         className="z-10 cursor-pointer"
         onClick={() =>
-          handleTheme(
+          onClickThemeIcon(
             localStorage.getItem("nd-theme") === "dark" ? "light" : "dark",
           )
         }
@@ -154,7 +139,7 @@ export default function Navbar() {
 
         <Link
           to="contact"
-          offset={-60}
+          offset={0}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}

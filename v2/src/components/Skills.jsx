@@ -20,19 +20,16 @@ export default function Skills() {
           Skills
         </h2>
 
-        {/* Skills Container */}
-        <div className="mx-auto grid w-full max-w-[1000px] flex-col justify-center text-center first:p-4 lg:gap-12 xl:gap-14">
-          {/* Skills Grid */}
-          <div className="lg:gap-18 grid grid-cols-1 gap-8 py-8 text-center 2sm:grid-cols-2 sm:gap-12 md:grid-cols-3">
-            <Skill imageSrc={JavaScript}>JavaScript</Skill>
-            <Skill imageSrc={CSharp}>C#</Skill>
-            <Skill imageSrc={ReactImage}>React</Skill>
-            <Skill imageSrc={TailwindCSS}>Tailwind CSS</Skill>
-            <Skill imageSrc={DOTNET}>.NET</Skill>
-            <Skill imageSrc={HTML}>HTML</Skill>
-            <Skill imageSrc={CSS}>CSS</Skill>
-            <Skill imageSrc={Unity}>Unity</Skill>
-          </div>
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 gap-8 py-8 text-center 2sm:grid-cols-2 sm:gap-12 md:grid-cols-3 lg:gap-14">
+          <Skill imageSrc={JavaScript}>JavaScript</Skill>
+          <Skill imageSrc={CSharp}>C#</Skill>
+          <Skill imageSrc={ReactImage}>React</Skill>
+          <Skill imageSrc={TailwindCSS}>Tailwind CSS</Skill>
+          <Skill imageSrc={DOTNET}>.NET</Skill>
+          <Skill imageSrc={HTML}>HTML</Skill>
+          <Skill imageSrc={CSS}>CSS</Skill>
+          <Skill imageSrc={Unity}>Unity</Skill>
         </div>
       </div>
     </section>
