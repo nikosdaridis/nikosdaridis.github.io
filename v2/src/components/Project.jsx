@@ -1,8 +1,3 @@
-function openUrlInNewTab(url) {
-  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-  if (newWindow) newWindow.opener = null;
-}
-
 export default function Project({
   imageSrc,
   description,
@@ -32,11 +27,17 @@ export default function Project({
       </h4>
 
       {/* Buttons */}
-      <div className="mt-4 grid grid-cols-2 gap-2">
-        {buttons &&
-          buttons.map((button) => (
+      {buttons && (
+        <div
+          className={
+            buttons.length === 1
+              ? "mt-4 flex justify-center"
+              : "mt-4 grid grid-cols-2 gap-2"
+          }
+        >
+          {buttons.map((button) => (
             <a
-              className="m-2 flex min-w-fit items-center justify-around rounded-lg border-2 border-highlight px-1 py-3 text-xs text-text hover:border-highlight hover:bg-highlight 2sm:mx-2 2sm:text-sm sm:mx-4 md:mx-2"
+              className="m-2 flex min-w-fit items-center justify-around rounded-lg border-2 border-highlight p-3 text-xs text-text hover:border-highlight hover:bg-highlight 2sm:mx-2 2sm:text-sm sm:mx-4 md:mx-2"
               href={button.link}
               target="_blank"
               rel="noreferrer"
@@ -48,7 +49,8 @@ export default function Project({
               </div>
             </a>
           ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
