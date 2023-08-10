@@ -14,7 +14,7 @@
 
   :root[theme="light"] {
     --color-primary: 216deg 100% 99%;
-    --color-secondary: 218deg 100% 98%;
+    --color-secondary: 216deg 100% 96%;
     --color-highlight: 211deg 100% 54%;
     --color-text: 200deg 8% 15%;
   }

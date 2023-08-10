@@ -1,10 +1,4 @@
 import Project from "./Project";
-import ColorPal from "/Portfolio/ColorPal.jpg";
-import PortfolioImage from "/Portfolio/Portfolio.jpg";
-import ProjectSouls from "/Portfolio/ProjectSouls.jpg";
-import BezierPathTool from "/Portfolio/2DBezierPathTool.jpg";
-import SpaceCowboys from "/Portfolio/SpaceCowboys.jpg";
-
 import { FaGithub, FaChrome } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { BsDownload } from "react-icons/bs";
@@ -24,7 +18,7 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <div className="mx-3 grid grid-cols-1 gap-16 py-8 text-center 2sm:mx-6 sm:gap-8 sm:gap-y-[4rem] md:grid-cols-2 xl:grid-cols-3">
           <Project
-            imageSrc={ColorPal}
+            image="ColorPal.jpg"
             description="Chrome extension color tool to extract any pixel from the screen, pick any color from a palette and save favorite colors"
             techStack="JavaScript, HTML, CSS"
             buttons={[
@@ -44,7 +38,7 @@ export default function Portfolio() {
           </Project>
 
           <Project
-            imageSrc={PortfolioImage}
+            image="Portfolio.jpg"
             description="Responsive minimalist one page portfolio website"
             techStack="React, Tailwind CSS"
             buttons={[
@@ -69,7 +63,7 @@ export default function Portfolio() {
           </Project>
 
           <Project
-            imageSrc={ProjectSouls}
+            image="ProjectSouls.jpg"
             description="Tech demo clone of Dark Souls"
             techStack="C#, Unity"
             buttons={[
@@ -89,7 +83,7 @@ export default function Portfolio() {
           </Project>
 
           <Project
-            imageSrc={BezierPathTool}
+            image="2DBezierPathTool.jpg"
             description="Unity editor tool to create and edit 2d bezier paths"
             techStack="C#, Unity"
             buttons={[
@@ -104,7 +98,7 @@ export default function Portfolio() {
           </Project>
 
           <Project
-            imageSrc={SpaceCowboys}
+            image="SpaceCowboys.jpg"
             description="2d multiplayer fighting game"
             techStack="C#, Unity"
             buttons={[

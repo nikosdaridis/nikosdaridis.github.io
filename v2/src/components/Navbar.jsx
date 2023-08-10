@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Logo from "/Logo.png";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
@@ -18,7 +17,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
         className="z-10 cursor-pointer"
         onClick={() => hamburger && setHamburger(false)}
       >
-        <img src={Logo} alt="Logo" style={{ width: "50px" }} />
+        <img src="/Logo.png" alt="Logo" style={{ width: "50px" }} />
       </Link>
 
       {/* Menu */}

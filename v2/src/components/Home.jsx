@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import Typed from "typed.js";
 import { Link } from "react-scroll";
+import Typed from "typed.js";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 

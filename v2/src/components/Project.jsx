@@ -1,5 +1,5 @@
 export default function Project({
-  imageSrc,
+  image,
   description,
   techStack,
   buttons,
@@ -11,7 +11,7 @@ export default function Project({
       {/* Image */}
       <img
         className="mx-auto h-fit w-fit rounded-md"
-        src={imageSrc}
+        src={`/Portfolio/${image}`}
         alt={children}
       />
 

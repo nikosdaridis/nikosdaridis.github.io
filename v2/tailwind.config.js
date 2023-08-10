@@ -9,6 +9,12 @@ export default {
         highlight: "hsl(var(--color-highlight) / <alpha-value>)",
         text: "hsl(var(--color-text) / <alpha-value>)",
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      animation: {
+        bounce: "bounce 1.5s 10",
+      },
     },
     screens: {
       "2sm": "400px",
