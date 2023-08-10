@@ -2,13 +2,13 @@ import OnboardingCard from "../components/ColorPal/OnboardingCard";
 
 export default function ColorPalOnboarding() {
   return (
-    <section className="h-full min-h-screen w-full bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
+    <section className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
       {/* Container */}
-      <div className="mx-auto flex w-full max-w-fit flex-col justify-center p-4 text-center">
+      <div className="mx-auto flex h-full w-full max-w-fit flex-col items-center justify-center p-4 text-center">
         {/* Pin */}
-        <div className="absolute right-[95px] top-[20px] hidden animate-bounce md:inline-flex">
+        <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[95px]">
           <img className="h-[40px] w-[40px]" src="/ColorPal/Arrow.png" />
-          <p className="absolute right-[-90px] top-[50px] inline-flex w-[300px] flex-wrap items-center justify-center text-2xl font-semibold">
+          <p className="absolute right-[-75px] top-[50px] inline-flex w-[290px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-85px]">
             Click the
             <img
               className="mx-1 h-[25px] w-[25px]"
@@ -22,7 +22,7 @@ export default function ColorPalOnboarding() {
         </div>
 
         {/* Title */}
-        <h2 className="mt-[8rem] text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] lg:mt-[6rem] lg:text-[6rem] xl:mt-[4rem]">
+        <h2 className="text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] md:mt-[8rem] lg:mt-[0rem] lg:text-[6rem]">
           Get started
         </h2>
         <h3 className="text-[1rem] font-medium text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
@@ -30,23 +30,17 @@ export default function ColorPalOnboarding() {
         </h3>
 
         {/* Cards Grid */}
-        <div className="mt-[2rem] grid grid-cols-1 gap-14 2sm:mx-6 sm:gap-y-[4rem] md:grid-cols-2 lg:grid-cols-3 lg:gap-y-0">
+        <div className="mt-[2rem] grid grid-cols-1 2sm:mx-6 sm:gap-y-[4rem] md:grid-cols-2 md:gap-14 lg:grid-cols-3 lg:gap-y-0">
           <OnboardingCard
-            image="Onboarding1.png"
-            imageAlt="Open ColorPal"
+            image="OpenColorPal"
             text="Open ColorPal in the top right"
           />
 
-          <OnboardingCard
-            image="Onboarding2.png"
-            imageAlt="Layout explanation"
-            text="Layout explanation of ColorPal"
-          />
+          <OnboardingCard image="UIExplanation" text="Basic UI explanation" />
 
           <OnboardingCard
-            image="Onboarding3.png"
-            imageAlt="Options"
-            text="Plenty of options for customization"
+            image="Customization"
+            text="Plenty of customization"
           />
         </div>
       </div>

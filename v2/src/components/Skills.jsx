@@ -14,14 +14,14 @@ export default function Skills() {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 gap-8 py-8 text-center 2sm:grid-cols-2 sm:gap-12 md:grid-cols-3 lg:gap-14">
-          <Skill imageSrc="JavaScript.png">JavaScript</Skill>
-          <Skill imageSrc="CSharp.png">C#</Skill>
-          <Skill imageSrc="React.png">React</Skill>
-          <Skill imageSrc="TailwindCSS.png">Tailwind CSS</Skill>
-          <Skill imageSrc="DOTNET.png">.NET</Skill>
-          <Skill imageSrc="HTML.png">HTML</Skill>
-          <Skill imageSrc="CSS.png">CSS</Skill>
-          <Skill imageSrc="Unity.png">Unity</Skill>
+          <Skill image="JavaScript.png">JavaScript</Skill>
+          <Skill image="CSharp.png">C#</Skill>
+          <Skill image="React.png">React</Skill>
+          <Skill image="TailwindCSS.png">Tailwind CSS</Skill>
+          <Skill image="DOTNET.png">.NET</Skill>
+          <Skill image="HTML.png">HTML</Skill>
+          <Skill image="CSS.png">CSS</Skill>
+          <Skill image="Unity.png">Unity</Skill>
         </div>
       </div>
     </section>
