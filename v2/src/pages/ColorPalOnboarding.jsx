@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import OnboardingCard from "../components/ColorPal/OnboardingCard";
 
-export default function ColorPalOnboarding() {
+export default function ColorPalOnboarding({ setTitleAndFavicon }) {
+  useEffect(() => {
+    setTitleAndFavicon("ColorPal", "/ColorPalLogo.png");
+  }, [setTitleAndFavicon]);
+
   return (
     <section className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
       {/* Container */}
@@ -17,7 +22,7 @@ export default function ColorPalOnboarding() {
             icon and
             <img className="mx-1 h-[25px] w-[25px]" src="/ColorPal/Pin.png" />
             pin ColorPal
-            <img className="mx-1 h-[25px] w-[25px]" src="/ColorPal/Logo.png" />
+            <img className="mx-1 h-[25px] w-[25px]" src="/ColorPalLogo.png" />
           </p>
         </div>
 
@@ -30,7 +35,7 @@ export default function ColorPalOnboarding() {
         </h3>
 
         {/* Cards Grid */}
-        <div className="mt-[2rem] grid grid-cols-1 2sm:mx-6 sm:gap-y-[4rem] md:grid-cols-2 md:gap-14 lg:grid-cols-3 lg:gap-y-0">
+        <div className="mx-6 mb-12 mt-8 grid grid-cols-1 gap-16 md:grid-cols-2 lg:mb-0 lg:grid-cols-3">
           <OnboardingCard
             image="OpenColorPal"
             text="Open ColorPal in the top right"

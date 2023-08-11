@@ -8,14 +8,15 @@ import Footer from "../components/Footer";
 
 const htmlElem = document.getElementsByTagName("html")[0];
 
-export default function Homepage() {
+export default function Homepage({ setTitleAndFavicon }) {
   const [theme, setTheme] = useState(
     localStorage.getItem("nd-theme") ?? "dark",
   );
 
   useEffect(() => {
+    setTitleAndFavicon("Nikos Daridis", "/HomepageLogo.png");
     handleTheme(localStorage.getItem("nd-theme") ?? "dark");
-  }, []);
+  }, [setTitleAndFavicon]);
 
   function handleTheme(theme) {
     setTheme(theme);

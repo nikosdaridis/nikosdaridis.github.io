@@ -17,7 +17,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
         className="z-10 cursor-pointer"
         onClick={() => hamburger && setHamburger(false)}
       >
-        <img src="/Logo.png" alt="Logo" style={{ width: "50px" }} />
+        <img src="/HomepageLogo.png" alt="Logo" style={{ width: "50px" }} />
       </Link>
 
       {/* Menu */}
