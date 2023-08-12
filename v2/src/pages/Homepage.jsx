@@ -13,10 +13,13 @@ export default function Homepage({ setTitleAndFavicon }) {
     localStorage.getItem("nd-theme") ?? "dark",
   );
 
-  useEffect(() => {
-    setTitleAndFavicon("Nikos Daridis", "/HomepageLogo.png");
-    handleTheme(localStorage.getItem("nd-theme") ?? "dark");
-  }, [setTitleAndFavicon]);
+  useEffect(
+    function () {
+      setTitleAndFavicon("Nikos Daridis", "/HomepageLogo.png");
+      handleTheme(localStorage.getItem("nd-theme") ?? "dark");
+    },
+    [setTitleAndFavicon],
+  );
 
   function handleTheme(theme) {
     setTheme(theme);

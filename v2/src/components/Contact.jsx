@@ -6,8 +6,6 @@ export default function Contact() {
 
   const form = useRef();
 
-  var timeout = null;
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -25,8 +23,7 @@ export default function Contact() {
             : "There was an error. Try again later",
         );
 
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
+        setTimeout(function () {
           setMessageResult("");
         }, 5000);
       });
@@ -80,8 +77,8 @@ export default function Contact() {
           <p
             className={
               messageResult.includes("successfully")
-                ? "mb-[-1rem] mt-4 text-green-500"
-                : "mb-[-1rem] mt-4 text-red-500"
+                ? "mb-[-1rem] mt-4 text-green-600"
+                : "mb-[-1rem] mt-4 text-red-600"
             }
           >
             {messageResult}

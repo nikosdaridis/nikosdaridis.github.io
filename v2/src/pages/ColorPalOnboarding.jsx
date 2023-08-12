@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import OnboardingCard from "../components/ColorPal/OnboardingCard";
+import OnboardingCard from "../components/Colorpal/OnboardingCard";
 
-export default function ColorPalOnboarding({ setTitleAndFavicon }) {
+export default function ColorpalOnboarding({ setTitleAndFavicon }) {
   useEffect(() => {
-    setTitleAndFavicon("ColorPal", "/ColorPalLogo.png");
+    setTitleAndFavicon("ColorPal", "/ColorpalLogo.png");
   }, [setTitleAndFavicon]);
 
   return (
@@ -11,18 +11,18 @@ export default function ColorPalOnboarding({ setTitleAndFavicon }) {
       {/* Container */}
       <div className="mx-auto flex h-full w-full max-w-fit flex-col items-center justify-center p-4 text-center">
         {/* Pin */}
-        <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[95px]">
-          <img className="h-[40px] w-[40px]" src="/ColorPal/Arrow.png" />
-          <p className="absolute right-[-75px] top-[50px] inline-flex w-[290px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-85px]">
+        <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[97px]">
+          <img className="h-[40px] w-[40px]" src="/Colorpal/Arrow.png" />
+          <p className="absolute right-[-75px] top-[50px] inline-flex w-[290px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-90px]">
             Click the
             <img
               className="mx-1 h-[25px] w-[25px]"
-              src="/ColorPal/Extension.png"
+              src="/Colorpal/Extension.png"
             />
             icon and
-            <img className="mx-1 h-[25px] w-[25px]" src="/ColorPal/Pin.png" />
+            <img className="mx-1 h-[25px] w-[25px]" src="/Colorpal/Pin.png" />
             pin ColorPal
-            <img className="mx-1 h-[25px] w-[25px]" src="/ColorPalLogo.png" />
+            <img className="mx-1 h-[25px] w-[25px]" src="/ColorpalLogo.png" />
           </p>
         </div>
 
@@ -35,9 +35,9 @@ export default function ColorPalOnboarding({ setTitleAndFavicon }) {
         </h3>
 
         {/* Cards Grid */}
-        <div className="mx-6 mb-12 mt-8 grid grid-cols-1 gap-16 md:grid-cols-2 lg:mb-0 lg:grid-cols-3">
+        <div className="mx-6 mb-12 mt-8 grid grid-cols-1 gap-16 md:grid-cols-2 lg:mb-0 lg:grid-cols-3 xl:gap-24">
           <OnboardingCard
-            image="OpenColorPal"
+            image="OpenColorpal"
             text="Open ColorPal in the top right"
           />
 

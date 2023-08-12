@@ -1,30 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Navbar({ theme, onClickThemeIcon }) {
   const [hamburger, setHamburger] = useState(false);
+  const [scrollY, setScrollY] = useState(window.scrollY);
+
+  function handleScrollY() {
+    setScrollY(window.scrollY);
+  }
+
+  useEffect(function () {
+    window.addEventListener("scroll", handleScrollY);
+
+    return function () {
+      window.removeEventListener("scroll", handleScrollY);
+    };
+  }, []);
 
   return (
-    <header className="fixed z-10 flex h-[60px] w-full items-center justify-evenly bg-primary text-text">
+    <header
+      className={`${
+        scrollY > 600
+          ? "border-b-2 border-t-2 border-b-highlight border-t-primary "
+          : ""
+      }fixed z-10 flex h-[60px] w-full items-center justify-evenly bg-primary text-text`}
+    >
       {/* Logo */}
       <Link
         to="home"
-        offset={-60}
+        offset={-20}
         smooth={true}
         duration={400}
         className="z-10 cursor-pointer"
         onClick={() => hamburger && setHamburger(false)}
       >
-        <img src="/HomepageLogo.png" alt="Logo" style={{ width: "50px" }} />
+        <img className="w-[50px]" src="/HomepageLogo.png" alt="Logo" />
       </Link>
 
       {/* Menu */}
       <nav className="hidden text-lg font-semibold md:flex">
         <Link
           to="home"
-          offset={-60}
+          offset={-20}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -36,7 +55,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="skills"
-          offset={-60}
+          offset={-20}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -48,7 +67,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="portfolio"
-          offset={-60}
+          offset={-20}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -60,7 +79,6 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="contact"
-          offset={0}
           className="mx-4 cursor-pointer transition duration-300 ease-in-out hover:text-highlight"
           activeClass="text-highlight"
           spy={true}
@@ -70,7 +88,6 @@ export default function Navbar({ theme, onClickThemeIcon }) {
           Contact
         </Link>
       </nav>
-
       {/* Hamburger */}
       <div
         className="z-10 cursor-pointer md:hidden"
@@ -78,7 +95,6 @@ export default function Navbar({ theme, onClickThemeIcon }) {
       >
         {!hamburger ? <FaBars size={30} /> : <FaTimes size={30} />}
       </div>
-
       {/* Theme */}
       <div
         className="z-10 cursor-pointer"
@@ -94,18 +110,17 @@ export default function Navbar({ theme, onClickThemeIcon }) {
           <MdDarkMode size={30} />
         )}
       </div>
-
       {/* Mobile Menu */}
       <nav
         className={
           !hamburger
             ? "hidden"
-            : "absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-primary"
+            : "absolute left-0 top-[58px] flex h-[calc(100vh-58px)] w-full flex-col items-center justify-center bg-primary"
         }
       >
         <Link
           to="home"
-          offset={-60}
+          offset={-20}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
@@ -116,7 +131,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="skills"
-          offset={-60}
+          offset={-20}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
@@ -127,7 +142,7 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="portfolio"
-          offset={-60}
+          offset={-20}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
@@ -138,7 +153,6 @@ export default function Navbar({ theme, onClickThemeIcon }) {
 
         <Link
           to="contact"
-          offset={0}
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}

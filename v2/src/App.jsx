@@ -1,15 +1,16 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import ColorPalOnboarding from "./pages/ColorPalOnboarding";
+import ColorpalOnboarding from "./pages/ColorpalOnboarding";
 
 function setTitleAndFavicon(title, favicon) {
+  let head = document.querySelector("head");
   let newTitle = document.createElement("title");
   newTitle.textContent = title;
-  document.querySelector("head").appendChild(newTitle);
-
   let newFavicon = document.createElement("link");
   newFavicon.setAttribute("rel", "icon");
   newFavicon.setAttribute("href", favicon);
+
+  head.appendChild(newTitle);
   document.querySelector("head").appendChild(newFavicon);
 }
 
@@ -26,7 +27,7 @@ export default function App() {
           <Route
             path="onboarding"
             element={
-              <ColorPalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
+              <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
             }
           />
           <Route path="*" element={<Navigate replace to="onboarding" />} />
