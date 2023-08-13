@@ -8,7 +8,11 @@ import Footer from "../components/Footer";
 
 const htmlElem = document.getElementsByTagName("html")[0];
 
-export default function Homepage({ setTitleAndFavicon }) {
+export default function Homepage({
+  setTitleAndFavicon,
+}: {
+  setTitleAndFavicon: Function;
+}) {
   const [theme, setTheme] = useState(
     localStorage.getItem("nd-theme") ?? "dark",
   );
@@ -21,7 +25,7 @@ export default function Homepage({ setTitleAndFavicon }) {
     [setTitleAndFavicon],
   );
 
-  function handleTheme(theme) {
+  function handleTheme(theme: string) {
     setTheme(theme);
     localStorage.setItem("nd-theme", theme);
     htmlElem.setAttribute("theme", theme);

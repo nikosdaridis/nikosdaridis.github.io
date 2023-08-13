@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <section
-      name="home"
+      id="home"
       className="h-screen w-full bg-gradient-to-b from-primary to-secondary"
     >
       {/* Container */}

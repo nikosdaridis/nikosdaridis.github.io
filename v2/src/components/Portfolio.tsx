@@ -6,7 +6,7 @@ import { BsDownload } from "react-icons/bs";
 export default function Portfolio() {
   return (
     <section
-      name="portfolio"
+      id="portfolio"
       className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-to-b from-primary to-secondary text-text"
     >
       {/* Container */}

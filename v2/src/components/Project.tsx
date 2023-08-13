@@ -4,6 +4,12 @@ export default function Project({
   techStack,
   buttons,
   children,
+}: {
+  image: string;
+  description: string;
+  techStack: string;
+  buttons: Array<{ name: string; image: any; link: string }>;
+  children: string;
 }) {
   return (
     // Project Container
@@ -14,7 +20,6 @@ export default function Project({
         src={`/Portfolio/${image}`}
         alt={children}
       />
-
       {/* Info */}
       <h3 className="m-4 text-xl font-bold text-highlight sm:text-2xl">
         {children}

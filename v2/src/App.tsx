@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import ColorpalOnboarding from "./pages/ColorpalOnboarding";
+import Homepage from "./pages/Homepage.tsx";
+import ColorpalOnboarding from "./pages/ColorpalOnboarding.tsx";
 
-function setTitleAndFavicon(title, favicon) {
+function setTitleAndFavicon(title: string, favicon: string): void {
   let head = document.querySelector("head");
   let newTitle = document.createElement("title");
-  newTitle.textContent = title;
   let newFavicon = document.createElement("link");
+
+  newTitle.textContent = title;
   newFavicon.setAttribute("rel", "icon");
   newFavicon.setAttribute("href", favicon);
 
-  head.appendChild(newTitle);
-  document.querySelector("head").appendChild(newFavicon);
+  head?.appendChild(newTitle);
+  head?.appendChild(newFavicon);
 }
 
 export default function App() {

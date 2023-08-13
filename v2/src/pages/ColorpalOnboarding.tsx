@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import OnboardingCard from "../components/Colorpal/OnboardingCard";
 
-export default function ColorpalOnboarding({ setTitleAndFavicon }) {
+export default function ColorpalOnboarding({
+  setTitleAndFavicon,
+}: {
+  setTitleAndFavicon: Function;
+}) {
   useEffect(() => {
     setTitleAndFavicon("ColorPal", "/ColorpalLogo.png");
   }, [setTitleAndFavicon]);

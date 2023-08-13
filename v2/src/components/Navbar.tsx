@@ -3,7 +3,13 @@ import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
-export default function Navbar({ theme, onClickThemeIcon }) {
+export default function Navbar({
+  theme,
+  onClickThemeIcon,
+}: {
+  theme: string;
+  onClickThemeIcon: Function;
+}) {
   const [hamburger, setHamburger] = useState(false);
   const [scrollY, setScrollY] = useState(window.scrollY);
 

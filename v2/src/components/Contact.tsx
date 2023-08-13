@@ -4,16 +4,16 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [messageResult, setMessageResult] = useState("");
 
-  const form = useRef();
+  const form = useRef(null);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: any) {
     e.preventDefault();
 
     emailjs
       .sendForm(
         "service_csks0d8",
         "template_l4aoenf",
-        form.current,
+        form.current!,
         "tkKxnFTTTampSyr3G",
       )
       .then((result) => {
@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <section
-      name="contact"
+      id="contact"
       className="h-screen w-full bg-gradient-to-b from-secondary to-primary p-4"
     >
       {/* Container */}
@@ -69,8 +69,8 @@ export default function Contact() {
             className="w-full rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
             placeholder="Message"
             name="message"
-            cols="70"
-            rows="10"
+            cols={70}
+            rows={10}
             required
           />
 

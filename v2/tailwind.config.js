@@ -13,20 +13,15 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       animation: {
-        bounce: "bounce 1.5s 15",
+        bounce: "bounce 1.5s 20",
       },
     },
     screens: {
       "2sm": "400px",
-
       sm: "640px",
-
       md: "768px",
-
       lg: "1024px",
-
       xl: "1280px",
-
       "2xl": "1536px",
     },
   },
