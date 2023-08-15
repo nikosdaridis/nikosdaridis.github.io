@@ -13,7 +13,7 @@ export default function Navbar({
   const [hamburger, setHamburger] = useState(false);
   const [scrollY, setScrollY] = useState(window.scrollY);
 
-  function handleScrollY() {
+  function handleScrollY(): void {
     setScrollY(window.scrollY);
   }
 

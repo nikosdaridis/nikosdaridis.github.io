@@ -6,7 +6,7 @@ export default function Contact() {
 
   const form = useRef(null);
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: any): void {
     e.preventDefault();
 
     emailjs
@@ -89,7 +89,7 @@ export default function Contact() {
             className={
               messageResult
                 ? "hidden"
-                : "mx-auto my-8 flex items-center rounded-lg border-2 border-highlight px-4 py-3 text-text hover:bg-highlight"
+                : "mx-auto my-8 flex items-center rounded-lg border-2 border-highlight px-4 py-3 font-semibold text-text hover:bg-highlight"
             }
             type="submit"
             value="Send"

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Homepage from "./pages/Homepage.tsx";
-import ColorpalOnboarding from "./pages/ColorpalOnboarding.tsx";
+import Homepage from "./pages/Homepage";
+import ColorpalOnboarding from "./pages/ColorpalOnboarding";
 
 function setTitleAndFavicon(title: string, favicon: string): void {
   let head = document.querySelector("head");

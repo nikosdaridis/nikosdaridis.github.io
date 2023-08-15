@@ -25,7 +25,7 @@ export default function Homepage({
     [setTitleAndFavicon],
   );
 
-  function handleTheme(theme: string) {
+  function handleTheme(theme: string): void {
     setTheme(theme);
     localStorage.setItem("nd-theme", theme);
     htmlElem.setAttribute("theme", theme);
