@@ -17,10 +17,10 @@ export default function Navbar({
     setScrollY(window.scrollY);
   }
 
-  useEffect(function () {
+  useEffect(() => {
     window.addEventListener("scroll", handleScrollY);
 
-    return function () {
+    return () => {
       window.removeEventListener("scroll", handleScrollY);
     };
   }, []);

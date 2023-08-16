@@ -7,7 +7,7 @@ import { IconContext } from "react-icons";
 export default function Home() {
   const typedElem = useRef(null);
 
-  useEffect(function () {
+  useEffect(() => {
     const typed = new Typed(typedElem.current, {
       strings: ["Software Engineer", "Game Developer"],
       typeSpeed: 80,
@@ -16,7 +16,7 @@ export default function Home() {
       loop: true,
     });
 
-    return function () {
+    return () => {
       typed.destroy();
     };
   }, []);

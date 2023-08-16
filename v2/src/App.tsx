@@ -1,6 +1,9 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import ColorpalOnboarding from "./pages/ColorpalOnboarding";
+import Loading from "./pages/Loading";
+
+const Homepage = lazy(() => import("./pages/Homepage"));
+const ColorpalOnboarding = lazy(() => import("./pages/ColorpalOnboarding"));
 
 function setTitleAndFavicon(title: string, favicon: string): void {
   let head = document.querySelector("head");
@@ -18,26 +21,28 @@ function setTitleAndFavicon(title: string, favicon: string): void {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          index
-          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
-        />
-        <Route path="colorpal">
-          <Route index element={<Navigate replace to="onboarding" />} />
+      <Suspense fallback={<Loading />}>
+        <Routes>
           <Route
-            path="onboarding"
-            element={
-              <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
-            }
+            index
+            element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
           />
-          <Route path="*" element={<Navigate replace to="onboarding" />} />
-        </Route>
-        <Route
-          path="*"
-          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
-        />
-      </Routes>
+          <Route path="colorpal">
+            <Route index element={<Navigate replace to="onboarding" />} />
+            <Route
+              path="onboarding"
+              element={
+                <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
+              }
+            />
+            <Route path="*" element={<Navigate replace to="onboarding" />} />
+          </Route>
+          <Route
+            path="*"
+            element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+          />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

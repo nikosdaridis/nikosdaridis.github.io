@@ -8,7 +8,7 @@ export default function ColorpalOnboarding({
 }) {
   useEffect(() => {
     setTitleAndFavicon("ColorPal", "/ColorpalLogo.png");
-  }, [setTitleAndFavicon]);
+  }, []);
 
   return (
     <section className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
