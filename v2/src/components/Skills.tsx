@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-to-b from-secondary to-primary text-text"
+      className="flex h-max min-h-screen w-full items-center justify-center bg-primary text-text"
     >
       {/* Container */}
       <div className="mx-auto flex h-full w-full max-w-fit flex-col justify-center text-center">

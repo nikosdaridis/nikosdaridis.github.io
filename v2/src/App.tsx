@@ -1,6 +1,5 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Loading from "./pages/Loading";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const ColorpalOnboarding = lazy(() => import("./pages/ColorpalOnboarding"));
@@ -21,28 +20,26 @@ function setTitleAndFavicon(title: string, favicon: string): void {
 export default function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
+      <Routes>
+        <Route
+          index
+          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+        />
+        <Route path="colorpal">
+          <Route index element={<Navigate replace to="onboarding" />} />
           <Route
-            index
-            element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+            path="onboarding"
+            element={
+              <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
+            }
           />
-          <Route path="colorpal">
-            <Route index element={<Navigate replace to="onboarding" />} />
-            <Route
-              path="onboarding"
-              element={
-                <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
-              }
-            />
-            <Route path="*" element={<Navigate replace to="onboarding" />} />
-          </Route>
-          <Route
-            path="*"
-            element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
-          />
-        </Routes>
-      </Suspense>
+          <Route path="*" element={<Navigate replace to="onboarding" />} />
+        </Route>
+        <Route
+          path="*"
+          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

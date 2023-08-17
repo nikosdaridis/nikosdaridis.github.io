@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 import Skills from "../components/Skills";
@@ -14,12 +15,12 @@ export default function Homepage({
   setTitleAndFavicon: Function;
 }) {
   const [theme, setTheme] = useState(
-    localStorage.getItem("nd-theme") ?? "dark",
+    localStorage.getItem("nd-theme") ?? "light",
   );
 
   useEffect(() => {
     setTitleAndFavicon("Nikos Daridis", "/HomepageLogo.png");
-    handleTheme(localStorage.getItem("nd-theme") ?? "dark");
+    handleTheme(localStorage.getItem("nd-theme") ?? "light");
   }, []);
 
   function handleTheme(theme: string): void {

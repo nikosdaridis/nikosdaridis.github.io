@@ -6,17 +6,17 @@
 
 @layer base {
   :root[theme="dark"] {
-    --color-primary: 200deg 8% 15%;
-    --color-secondary: 208deg 18% 21%;
+    --color-primary: 225deg 6% 13%;
+    --color-secondary: 0deg 0% 9%;
     --color-highlight: 211deg 100% 54%;
-    --color-text: 216deg 100% 99%;
+    --color-text: 0deg 0% 100%;
   }
 
   :root[theme="light"] {
-    --color-primary: 216deg 100% 99%;
-    --color-secondary: 216deg 100% 97%;
+    --color-primary: 0deg 0% 100%;
+    --color-secondary: 0deg 0% 95%;
     --color-highlight: 211deg 100% 54%;
-    --color-text: 200deg 8% 15%;
+    --color-text: 0deg 0% 13%;
   }
 
   body {

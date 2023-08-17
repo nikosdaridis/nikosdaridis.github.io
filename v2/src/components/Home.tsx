@@ -22,10 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="h-screen w-full bg-gradient-to-b from-primary to-secondary"
-    >
+    <section id="home" className="h-screen w-full bg-primary">
       {/* Container */}
       <div className="mx-auto flex h-full max-w-fit flex-col items-center justify-center">
         {/* Name and typed */}

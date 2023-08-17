@@ -99,14 +99,14 @@ export default function Navbar({
         className="z-10 cursor-pointer md:hidden"
         onClick={() => setHamburger(!hamburger)}
       >
-        {!hamburger ? <FaBars size={30} /> : <FaTimes size={30} />}
+        {hamburger ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {/* Theme */}
       <div
         className="z-10 cursor-pointer"
         onClick={() =>
           onClickThemeIcon(
-            localStorage.getItem("nd-theme") === "dark" ? "light" : "dark",
+            localStorage.getItem("nd-theme") === "light" ? "dark" : "light",
           )
         }
       >
@@ -119,9 +119,9 @@ export default function Navbar({
       {/* Mobile Menu */}
       <nav
         className={
-          !hamburger
-            ? "hidden"
-            : "absolute left-0 top-[58px] flex h-[calc(100vh-58px)] w-full flex-col items-center justify-center bg-primary"
+          hamburger
+            ? "absolute left-0 top-[58px] flex h-[calc(100vh-58px)] w-full flex-col items-center justify-center bg-primary"
+            : "hidden"
         }
       >
         <Link
@@ -130,7 +130,7 @@ export default function Navbar({
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
-          onClick={() => setHamburger(!hamburger)}
+          onClick={() => setHamburger(false)}
         >
           Home
         </Link>
@@ -141,7 +141,7 @@ export default function Navbar({
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
-          onClick={() => setHamburger(!hamburger)}
+          onClick={() => setHamburger(false)}
         >
           Skills
         </Link>
@@ -152,7 +152,7 @@ export default function Navbar({
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
-          onClick={() => setHamburger(!hamburger)}
+          onClick={() => setHamburger(false)}
         >
           Portfolio
         </Link>
@@ -162,7 +162,7 @@ export default function Navbar({
           className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
           smooth={true}
           duration={400}
-          onClick={() => setHamburger(!hamburger)}
+          onClick={() => setHamburger(false)}
         >
           Contact
         </Link>
