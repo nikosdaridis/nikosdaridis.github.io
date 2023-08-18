@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import Typed from "typed.js";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Typed from "typed.js";
 
 export default function Home() {
   const typedElem = useRef(null);
@@ -39,11 +39,11 @@ export default function Home() {
         </div>
 
         {/* Buttons */}
-        <div className="mt-8 grid cursor-pointer grid-cols-1 place-items-center gap-4 2sm:flex sm:gap-6 lg:gap-8">
+        <div className="mt-8 grid grid-cols-1 place-items-center gap-4 2sm:flex sm:gap-6 lg:gap-8">
           <Link
             to="portfolio"
             offset={-20}
-            className="col-span-2 my-2 flex items-center rounded-xl border-2 border-highlight p-[10px] text-xs font-semibold text-text hover:border-highlight hover:bg-highlight sm:p-[14px] sm:text-sm lg:text-base"
+            className="col-span-2 my-2 flex cursor-pointer items-center rounded-xl border-2 border-highlight p-[10px] text-xs font-semibold text-text hover:border-highlight hover:bg-highlight sm:p-[14px] sm:text-sm lg:text-base"
             smooth={true}
             duration={400}
           >

@@ -39,8 +39,8 @@ export default function Portfolio() {
 
           <Project
             image="Portfolio.jpg"
-            description="Responsive minimalist one page portfolio website"
-            techStack="React, Tailwind CSS"
+            description="Responsive minimalist portfolio website"
+            techStack="React, TypeScript, Tailwind CSS"
             buttons={[
               {
                 name: "Website v2",

@@ -24,10 +24,12 @@ export default function Project({
       <h3 className="m-4 text-xl font-bold text-highlight sm:text-2xl">
         {children}
       </h3>
-      <p className="m-4 text-sm text-text 2sm:text-base">{description}</p>
-      <h4 className="m-4 text-sm font-semibold text-highlight 2sm:text-base">
+      <p className="m-4 text-sm font-medium text-text 2sm:text-base">
+        {description}
+      </p>
+      <p className="m-4 text-sm font-semibold text-highlight 2sm:text-base">
         {techStack}
-      </h4>
+      </p>
 
       {/* Buttons */}
       {buttons && (

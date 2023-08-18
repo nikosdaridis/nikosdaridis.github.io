@@ -44,7 +44,7 @@ export default function Contact() {
           </h2>
 
           {/* Name and Email */}
-          <div className="mb-3 mt-20 flex flex-wrap justify-between">
+          <div className="mb-3 mt-20 flex flex-wrap justify-between font-medium">
             <input
               className="w-[49%] rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
               type="text"
@@ -63,7 +63,7 @@ export default function Contact() {
 
           {/* Message */}
           <textarea
-            className="w-full rounded-lg border-2 border-highlight bg-primary p-4 text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
+            className="w-full rounded-lg border-2 border-highlight bg-primary p-4 font-medium text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
             placeholder="Message"
             name="message"
             cols={70}
