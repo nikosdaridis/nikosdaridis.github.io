@@ -11,7 +11,7 @@ export default function Portfolio() {
     >
       {/* Container */}
       <div className="mx-auto flex h-full w-full max-w-fit flex-col justify-center text-center">
-        <h2 className="mt-16 inline pb-8 text-4xl font-bold text-text lg:text-6xl">
+        <h2 className="mt-4 inline pb-8 text-4xl font-bold text-text lg:text-6xl">
           Portfolio
         </h2>
 
@@ -20,7 +20,7 @@ export default function Portfolio() {
           <Project
             image="ColorPal.jpg"
             description="Chrome extension color tool to extract any pixel from the screen, pick any color from a palette and save favorite colors"
-            techStack="JavaScript, HTML, CSS"
+            techStack="TypeScript, HTML, CSS"
             buttons={[
               {
                 name: "Web Store",

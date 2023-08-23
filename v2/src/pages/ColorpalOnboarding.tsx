@@ -17,16 +17,16 @@ export default function ColorpalOnboarding({
         {/* Pin */}
         <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[97px]">
           <img className="h-[40px] w-[40px]" src="/Colorpal/Arrow.png" />
-          <p className="absolute right-[-75px] top-[50px] inline-flex w-[290px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-90px]">
-            Click the
+          <p className="absolute right-[-75px] top-[50px] inline-flex w-[280px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-90px]">
+            Click extensions
             <img
               className="mx-1 h-[25px] w-[25px]"
               src="/Colorpal/Extension.png"
             />
-            icon and
+            and pin
             <img className="mx-1 h-[25px] w-[25px]" src="/Colorpal/Pin.png" />
-            pin ColorPal
-            <img className="mx-1 h-[25px] w-[25px]" src="/ColorpalLogo.png" />
+            ColorPal
+            <img className="mx-1 h-[25px] w-[25px]" src="/Colorpal/Icon.png" />
           </p>
         </div>
 

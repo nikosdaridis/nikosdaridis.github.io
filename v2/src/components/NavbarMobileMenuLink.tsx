@@ -10,7 +10,7 @@ export default function NavbarMobileMenuLink({
   return (
     <Link
       to={children.toLowerCase()}
-      offset={-20}
+      offset={-60}
       className="cursor-pointer py-4 text-4xl font-medium transition duration-300 ease-in-out hover:text-highlight"
       smooth={true}
       duration={400}

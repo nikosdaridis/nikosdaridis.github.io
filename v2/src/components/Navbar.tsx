@@ -33,7 +33,7 @@ export default function Navbar({
         {/* Logo */}
         <Link
           to="home"
-          offset={-20}
+          offset={-60}
           smooth={true}
           duration={400}
           className="z-10 cursor-pointer"

@@ -30,7 +30,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="h-screen w-full bg-primary p-4">
+    <section
+      id="contact"
+      className="h-screen min-h-[800px] w-full bg-primary p-4"
+    >
       {/* Container */}
       <div className="mx-auto flex h-full max-w-fit flex-col items-center justify-center">
         {/* Form */}
