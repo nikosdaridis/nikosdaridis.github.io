@@ -12,7 +12,7 @@
   <a href="https://nikosdaridis.github.io/v1" target="_blank">v1</a> built with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
 </p>
 <div align="center">
-<a  href="https://daridis.com"><img width="700" alt="Screenshot" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/v2/public/Portfolio/Portfolio.jpg></a>
+<a  href="https://daridis.com"><img alt="Screenshot" src=https://github.com/nikosdaridis/nikosdaridis.github.io/raw/main/v2/public/Portfolio/Portfolio.jpg></a>
 </div>
 
 ## 🛠 Installation

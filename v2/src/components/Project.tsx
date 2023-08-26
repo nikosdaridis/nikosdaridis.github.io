@@ -13,7 +13,7 @@ export default function Project({
 }) {
   return (
     // Project Container
-    <div className="h-fit w-fit max-w-[350px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.1] sm:h-full">
+    <div className="h-fit w-fit max-w-[350px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.1] hover:shadow-[0_0_10px_0_highlight] sm:h-full">
       {/* Image */}
       <img
         className="mx-auto h-fit w-fit rounded-t-md"
@@ -42,7 +42,7 @@ export default function Project({
         >
           {buttons.map((button) => (
             <a
-              className="m-2 flex min-w-fit items-center justify-around rounded-lg border-2 border-highlight p-3 text-xs text-text hover:border-highlight hover:bg-highlight 2sm:text-sm"
+              className="m-2 flex justify-around rounded-lg border-2 border-highlight p-3 text-xs text-text duration-300 hover:border-highlight hover:bg-highlight 2sm:text-sm"
               href={button.link}
               target="_blank"
               rel="noreferrer"

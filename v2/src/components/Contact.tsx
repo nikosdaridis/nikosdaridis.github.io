@@ -89,7 +89,7 @@ export default function Contact() {
             className={
               messageResult
                 ? "hidden"
-                : "mx-auto my-8 flex items-center rounded-lg border-2 border-highlight px-4 py-3 font-semibold text-text hover:bg-highlight"
+                : "mx-auto my-8 flex items-center rounded-lg border-2 border-highlight px-4 py-3 font-semibold text-text duration-300 hover:bg-highlight"
             }
             type="submit"
             value="Send"

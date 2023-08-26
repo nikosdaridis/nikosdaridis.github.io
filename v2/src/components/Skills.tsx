@@ -18,9 +18,9 @@ export default function Skills() {
           <Skill image="TypeScript.png">TypeScript</Skill>
           <Skill image="CSharp.png">C#</Skill>
           <Skill image="React.png">React</Skill>
+          <Skill image="Redux.png">Redux</Skill>
           <Skill image="TailwindCSS.png">Tailwind CSS</Skill>
           <Skill image="DOTNET.png">.NET</Skill>
-          <Skill image="HTML.png">HTML</Skill>
           <Skill image="CSS.png">CSS</Skill>
           <Skill image="Unity.png">Unity</Skill>
         </div>

@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(typedElem.current, {
-      strings: ["Software Engineer", "Game Developer"],
+      strings: ["Software Engineer", "Web Engineer"],
       typeSpeed: 80,
       backSpeed: 50,
       backDelay: 2000,
@@ -42,8 +42,8 @@ export default function Home() {
         <div className="mt-8 grid grid-cols-1 place-items-center gap-4 2sm:flex sm:gap-6 lg:gap-8">
           <Link
             to="portfolio"
-            offset={-20}
-            className="col-span-2 my-2 flex cursor-pointer items-center rounded-xl border-2 border-highlight p-[10px] text-xs font-semibold text-text hover:border-highlight hover:bg-highlight sm:p-[14px] sm:text-sm lg:text-base"
+            offset={-60}
+            className="col-span-2 my-2 flex cursor-pointer items-center rounded-xl border-2 border-highlight p-[10px] text-xs font-semibold text-text duration-300 hover:border-highlight hover:bg-highlight sm:p-[14px] sm:text-sm lg:text-base"
             smooth={true}
             duration={400}
           >
@@ -51,7 +51,7 @@ export default function Home() {
           </Link>
 
           <a
-            className="my-2 flex items-center rounded-full border-2 border-highlight p-2 text-text hover:border-highlight hover:bg-highlight sm:p-[10px]"
+            className="my-2 flex items-center rounded-full border-2 border-highlight p-2 text-text duration-300 hover:border-highlight hover:bg-highlight sm:p-[10px]"
             href="https://github.com/nikosdaridis"
             target="_blank"
             rel="noreferrer"
@@ -65,7 +65,7 @@ export default function Home() {
             </IconContext.Provider>
           </a>
           <a
-            className="my-2 flex items-center rounded-full border-2 border-highlight p-2 text-text hover:border-highlight hover:bg-highlight sm:p-[10px]"
+            className="my-2 flex items-center rounded-full border-2 border-highlight p-2 text-text duration-300 hover:border-highlight hover:bg-highlight sm:p-[10px]"
             href="https://www.linkedin.com/in/nikosdaridis/"
             target="_blank"
             rel="noreferrer"

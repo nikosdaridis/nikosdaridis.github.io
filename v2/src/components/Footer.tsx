@@ -10,8 +10,8 @@ export default function Footer() {
 
       <Link to="home" smooth={true} duration={400}>
         <AiOutlineArrowUp
-          className="cursor-pointer rounded-md border-2 border-highlight text-text hover:bg-highlight"
-          size={25}
+          className="cursor-pointer rounded-md border-2 border-highlight text-text duration-300 hover:bg-highlight"
+          size={30}
         />
       </Link>
     </footer>
