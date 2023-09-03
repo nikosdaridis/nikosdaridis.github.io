@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef, ReactNode } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+export default function Contact({ title }: { title: ReactNode }) {
   const [messageResult, setMessageResult] = useState("");
 
   const form = useRef(null);
@@ -42,9 +42,11 @@ export default function Contact() {
           ref={form}
           onSubmit={(e) => handleSubmit(e)}
         >
-          <h2 className="inline text-3xl font-bold text-text 2sm:text-4xl lg:text-6xl">
-            Contact <span className="text-highlight">Me</span>
-          </h2>
+          {title && (
+            <h2 className="inline text-3xl font-bold text-text 2sm:text-4xl lg:text-6xl">
+              {title}
+            </h2>
+          )}
 
           {/* Name and Email */}
           <div className="mb-3 mt-20 flex flex-wrap justify-between font-medium">

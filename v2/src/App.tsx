@@ -1,43 +1,84 @@
-import { lazy } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useState, lazy } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
+const Colorpal = lazy(() => import("./pages/Colorpal"));
 const ColorpalOnboarding = lazy(() => import("./pages/ColorpalOnboarding"));
 
-function setTitleAndFavicon(title: string, favicon: string): void {
+function handleFaviconTitle(favicon: string, title: string): void {
   let head = document.querySelector("head");
-  let newTitle = document.createElement("title");
   let newFavicon = document.createElement("link");
+  let newTitle = document.createElement("title");
 
-  newTitle.textContent = title;
   newFavicon.setAttribute("rel", "icon");
   newFavicon.setAttribute("href", favicon);
+  newTitle.textContent = title;
 
   head?.appendChild(newTitle);
   head?.appendChild(newFavicon);
 }
 
 export default function App() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("nd-theme") ?? "light",
+  );
+
+  function handleTheme(theme: string): void {
+    setTheme(theme);
+    localStorage.setItem("nd-theme", theme);
+    document.getElementsByTagName("html")[0]?.setAttribute("theme", theme);
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route
           index
-          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+          element={
+            <Homepage
+              setFaviconTitle={handleFaviconTitle}
+              theme={theme}
+              setTheme={handleTheme}
+            />
+          }
         />
         <Route path="colorpal">
-          <Route index element={<Navigate replace to="onboarding" />} />
+          <Route
+            index
+            element={
+              <Colorpal
+                setFaviconTitle={handleFaviconTitle}
+                theme={theme}
+                setTheme={handleTheme}
+              />
+            }
+          />
           <Route
             path="onboarding"
             element={
-              <ColorpalOnboarding setTitleAndFavicon={setTitleAndFavicon} />
+              <ColorpalOnboarding setFaviconTitle={handleFaviconTitle} />
             }
           />
-          <Route path="*" element={<Navigate replace to="onboarding" />} />
+          <Route
+            path="*"
+            element={
+              <Colorpal
+                setFaviconTitle={handleFaviconTitle}
+                theme={theme}
+                setTheme={handleTheme}
+              />
+            }
+          />
         </Route>
         <Route
           path="*"
-          element={<Homepage setTitleAndFavicon={setTitleAndFavicon} />}
+          element={
+            <Homepage
+              setFaviconTitle={handleFaviconTitle}
+              theme={theme}
+              setTheme={handleTheme}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

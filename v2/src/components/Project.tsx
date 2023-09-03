@@ -13,7 +13,7 @@ export default function Project({
 }) {
   return (
     // Project Container
-    <div className="h-fit w-fit max-w-[350px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.1] hover:shadow-[0_0_10px_0_highlight] sm:h-full">
+    <div className="h-fit w-fit max-w-[320px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.1] hover:shadow-[0_0_10px_0_highlight] sm:h-full">
       {/* Image */}
       <img
         className="mx-auto h-fit w-fit rounded-t-md"
@@ -42,13 +42,13 @@ export default function Project({
         >
           {buttons.map((button) => (
             <a
-              className="m-2 flex justify-around rounded-lg border-2 border-highlight p-3 text-xs text-text duration-300 hover:border-highlight hover:bg-highlight 2sm:text-sm"
+              className="m-2 flex justify-around rounded-lg border-2 border-highlight p-3 duration-300 hover:border-highlight hover:bg-highlight"
               href={button.link}
               target="_blank"
               rel="noreferrer"
               key={button.link}
             >
-              <div className="grid items-center font-semibold 2sm:flex 2sm:gap-2">
+              <div className="grid items-center whitespace-nowrap text-xs font-semibold text-text 2sm:flex 2sm:gap-2 2sm:text-sm">
                 <button.image size={25} className="mx-auto mb-2 2sm:m-0" />
                 {button.name}
               </div>

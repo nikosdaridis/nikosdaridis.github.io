@@ -32,6 +32,11 @@ export default function Portfolio() {
                 image: FaGithub,
                 link: "https://github.com/nikosdaridis/colorpal",
               },
+              {
+                name: "Website",
+                image: TbWorldWww,
+                link: "https://colorpal.daridis.com",
+              },
             ]}
           >
             ColorPal

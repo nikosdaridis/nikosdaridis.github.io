@@ -5,7 +5,15 @@ export default function Footer() {
   return (
     <footer className="flex h-[60px] w-full items-center justify-around bg-secondary">
       <h3 className="text-sm font-medium text-text md:text-base">
-        Created by <span className="text-highlight">Nikos Daridis</span> | 2023
+        Created by{" "}
+        <a
+          href="https://github.com/nikosdaridis"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="text-highlight">Nikos Daridis</span>
+        </a>{" "}
+        | {new Date().getFullYear()}
       </h3>
 
       <Link to="home" smooth={true} duration={400}>
