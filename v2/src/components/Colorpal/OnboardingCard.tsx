@@ -9,7 +9,7 @@ export default function OnboardingCard({
     <div className="rounded-xl border-[15px] border-slate-200 bg-slate-100 shadow-lg shadow-[#b8d3ff] duration-500 hover:shadow-2xl hover:shadow-[#b8d3ff]">
       <img
         className="rounded-lg shadow-lg shadow-slate-300"
-        src={`/Colorpal/${image}.jpg`}
+        src={`/Colorpal/OnBoarding/${image}.jpg`}
         alt={image}
       />
 

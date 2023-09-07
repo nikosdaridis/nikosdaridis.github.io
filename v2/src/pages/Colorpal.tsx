@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { FaChrome } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
+import Features from "../components/Colorpal/Features";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -37,13 +38,13 @@ export default function Colorpal({
         setTheme={setTheme}
         navbarMargin={{
           marginLeft:
-            "2sm:ml-[4rem] md:ml-[1rem] lg:ml-[6rem] xl:ml-[14rem] 2xl:ml-[20rem]",
+            "ml-[1rem] 2sm:ml-[4rem] md:ml-[2rem] lg:ml-[6rem] xl:ml-[14rem] 2xl:ml-[20rem]",
           marginRight:
-            "2sm:mr-[4rem] md:mr-[1rem] lg:mr-[6rem] xl:mr-[14rem] 2xl:mr-[20rem]",
+            "mr-[1rem] 2sm:mr-[4rem] md:mr-[2rem] lg:mr-[6rem] xl:mr-[14rem] 2xl:mr-[20rem]",
         }}
         logoPath="/ColorpalLogo.png"
         logoTitle="ColorPal"
-        menu={["Home", "Contact"]}
+        menu={["Home", "Features", "Contact"]}
       />
       <Home
         h2Title="Advanced color tools"
@@ -76,7 +77,10 @@ export default function Colorpal({
           backSpeed: 50,
           backDelay: 1500,
         }}
-        internalLink={null}
+        internalLink={{
+          to: "features",
+          text: "Discover Features",
+        }}
         externalLinks={[
           {
             link: "https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
@@ -86,6 +90,7 @@ export default function Colorpal({
         ]}
       />
 
+      <Features />
       <Contact title="Contact" />
       <Footer />
     </>

@@ -16,17 +16,26 @@ export default function ColorpalOnboarding({
       <div className="mx-auto flex h-full w-full max-w-fit flex-col items-center justify-center p-4 text-center">
         {/* Pin */}
         <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[97px]">
-          <img className="h-[40px] w-[40px]" src="/Colorpal/Arrow.png" />
+          <img
+            className="h-[40px] w-[40px]"
+            src="/Colorpal/OnBoarding/Arrow.png"
+          />
           <p className="absolute right-[-75px] top-[50px] inline-flex w-[280px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-90px]">
             Click extensions
             <img
               className="mx-1 h-[25px] w-[25px]"
-              src="/Colorpal/Extension.png"
+              src="/Colorpal/OnBoarding/Extension.png"
             />
             and pin
-            <img className="mx-1 h-[25px] w-[25px]" src="/Colorpal/Pin.png" />
+            <img
+              className="mx-1 h-[25px] w-[25px]"
+              src="/Colorpal/OnBoarding/Pin.png"
+            />
             ColorPal
-            <img className="mx-1 h-[25px] w-[25px]" src="/Colorpal/Icon.png" />
+            <img
+              className="mx-1 h-[25px] w-[25px]"
+              src="/Colorpal/OnBoarding/Icon.png"
+            />
           </p>
         </div>
 

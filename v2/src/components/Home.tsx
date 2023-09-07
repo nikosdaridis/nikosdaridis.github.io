@@ -76,12 +76,16 @@ export default function Home({
         </div>
 
         {/* Buttons */}
-        <div className="mt-8 grid grid-cols-1 place-items-center gap-4 2sm:flex sm:gap-6 lg:gap-8">
-          {internalLink && (
+        <div
+          className={`${
+            externalLinks.length >= 2 ? "gap-x-4" : "gap-x-0"
+          } mt-8 grid place-items-center gap-y-4 2sm:flex 2sm:gap-6 lg:gap-8`}
+        >
+          {internalLink && internalLink.to && (
             <Link
               to={internalLink.to}
               offset={-60}
-              className="col-span-2 my-2 flex cursor-pointer items-center rounded-xl border-2 border-highlight p-[10px] text-xs font-semibold text-text duration-300 hover:border-highlight hover:bg-highlight sm:p-[14px] sm:text-sm lg:text-base"
+              className="col-span-2 my-2 cursor-pointer items-center rounded-xl border-2 border-highlight p-[10px] text-sm font-semibold text-text duration-300 hover:border-highlight hover:bg-highlight sm:p-[14px] lg:text-base"
               smooth={true}
               duration={400}
             >
@@ -105,7 +109,9 @@ export default function Home({
                 >
                   <link.image />
                   {link.text && (
-                    <p className="ml-2 font-semibold">{link.text}</p>
+                    <p className="ml-2 text-sm font-semibold lg:text-base">
+                      {link.text}
+                    </p>
                   )}
                 </IconContext.Provider>
               </a>
