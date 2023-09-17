@@ -6,7 +6,7 @@ export default function OnboardingCard({
   text: string;
 }) {
   return (
-    <div className="rounded-xl border-[15px] border-slate-200 bg-slate-100 shadow-lg shadow-[#b8d3ff] duration-500 hover:shadow-2xl hover:shadow-[#b8d3ff]">
+    <div className="rounded-xl border-[15px] border-slate-200 bg-slate-100 shadow-lg shadow-[#b8d3ff] duration-500 hover:shadow-xl hover:shadow-[#9ec1fa]">
       <img
         className="rounded-lg shadow-lg shadow-slate-300"
         src={`/Colorpal/OnBoarding/${image}.jpg`}

@@ -72,9 +72,10 @@ export default function Colorpal({
             "Move colors position",
             "Delete colors",
             "Light and Dark theme",
+            "30.000 color names",
           ],
           typeSpeed: 50,
-          backSpeed: 50,
+          backSpeed: 40,
           backDelay: 1500,
         }}
         internalLink={{

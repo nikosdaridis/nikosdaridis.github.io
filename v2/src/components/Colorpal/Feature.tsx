@@ -16,6 +16,7 @@ export default function Feature({
     <div className="mx-auto grid h-fit w-fit grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-16">
       <img
         className="m-auto rounded-lg lg:order-last"
+        loading="lazy"
         src={`/Colorpal/${image}`}
         alt={children}
       />

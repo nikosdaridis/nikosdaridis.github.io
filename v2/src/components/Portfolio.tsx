@@ -35,7 +35,7 @@ export default function Portfolio() {
               {
                 name: "Website",
                 image: TbWorldWww,
-                link: "https://colorpal.daridis.com",
+                link: "https://daridis.com/colorpal",
               },
             ]}
           >

@@ -43,7 +43,7 @@ export default function ColorpalOnboarding({
         <h2 className="text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] md:mt-[8rem] lg:mt-[0rem] lg:text-[6rem]">
           Get started
         </h2>
-        <h3 className="text-[1rem] font-medium text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
+        <h3 className="text-[1rem] font-semibold text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
           How to use ColorPal
         </h3>
 
