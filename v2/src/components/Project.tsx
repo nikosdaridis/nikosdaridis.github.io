@@ -13,7 +13,7 @@ export default function Project({
 }) {
   return (
     // Project Container
-    <div className="h-fit w-fit max-w-[320px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.1] hover:shadow-[0_0_10px_0_highlight] sm:h-full">
+    <div className="h-fit w-fit max-w-[320px] rounded-lg border-2 border-highlight duration-500 hover:scale-[1.05] hover:shadow-[0_0_10px_0_highlight] sm:h-full">
       {/* Image */}
       <img
         className="mx-auto h-fit w-fit rounded-t-md"
