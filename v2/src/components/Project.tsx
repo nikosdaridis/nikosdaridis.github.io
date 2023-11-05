@@ -17,7 +17,6 @@ export default function Project({
       {/* Image */}
       <img
         className="mx-auto h-fit w-fit rounded-t-md"
-        loading="lazy"
         src={`/Portfolio/${image}`}
         alt={children}
       />

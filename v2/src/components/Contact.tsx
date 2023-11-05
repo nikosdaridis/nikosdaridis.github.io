@@ -38,7 +38,7 @@ export default function Contact({ title }: { title: ReactNode }) {
       <div className="mx-auto flex h-full max-w-fit flex-col items-center justify-center">
         {/* Form */}
         <form
-          className="max-w-fit text-center"
+          className="text-center sm:w-[500px] md:w-[600px]"
           ref={form}
           onSubmit={(e) => handleSubmit(e)}
         >
@@ -68,11 +68,9 @@ export default function Contact({ title }: { title: ReactNode }) {
 
           {/* Message */}
           <textarea
-            className="w-full rounded-lg border-2 border-highlight bg-primary p-4 font-medium text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
+            className="h-[250px] w-[100%] rounded-lg border-2 border-highlight bg-primary p-4 font-medium text-text duration-300 focus:border-text focus:outline-none focus:ring-0"
             placeholder="Message"
             name="message"
-            cols={70}
-            rows={10}
             required
           />
 
