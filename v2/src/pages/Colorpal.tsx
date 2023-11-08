@@ -36,7 +36,12 @@ export default function Colorpal({
       <Navbar
         theme={theme}
         setTheme={setTheme}
-        margin={["1rem", "4rem", "4rem", "2rem", "6rem", "14rem", "20rem"]}
+        navbarMargin={{
+          marginLeft:
+            "ml-[1rem] 2sm:ml-[4rem] md:ml-[2rem] lg:ml-[6rem] xl:ml-[14rem] 2xl:ml-[20rem]",
+          marginRight:
+            "mr-[1rem] 2sm:mr-[4rem] md:mr-[2rem] lg:mr-[6rem] xl:mr-[14rem] 2xl:mr-[20rem]",
+        }}
         logoPath="/ColorpalLogo.png"
         logoTitle="ColorPal"
         menu={["Home", "Features", "Contact"]}

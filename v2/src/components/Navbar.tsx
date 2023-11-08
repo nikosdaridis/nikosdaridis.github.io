@@ -8,14 +8,14 @@ import NavbarMobileMenuLink from "./NavbarMobileMenuLink";
 export default function Navbar({
   theme,
   setTheme,
-  margin,
+  navbarMargin,
   logoPath,
   logoTitle,
   menu,
 }: {
   theme: string;
   setTheme: Function;
-  margin: string[];
+  navbarMargin: { marginLeft: string; marginRight: string };
   logoPath: string;
   logoTitle: string;
   menu: string[];
@@ -45,7 +45,7 @@ export default function Navbar({
             offset={-60}
             smooth={true}
             duration={400}
-            className={`z-10 flex cursor-pointer justify-self-start ml-[${margin[0]}] 2sm:ml-[${margin[1]}] sm:ml-[${margin[2]}] md:ml-[${margin[3]}] lg:ml-[${margin[4]}] xl:ml-[${margin[5]}] 2xl:ml-[${margin[6]}]`}
+            className={`z-10 flex cursor-pointer justify-self-start ${navbarMargin.marginLeft}`}
             onClick={() => hamburger && setHamburger(false)}
           >
             <img className="h-[40px] w-[40px]" src={logoPath} alt="Logo" />
@@ -79,7 +79,7 @@ export default function Navbar({
         {/* Theme */}
 
         <div
-          className={`z-10 cursor-pointer justify-self-end mr-[${margin[0]}] 2sm:mr-[${margin[1]}] sm:mr-[${margin[2]}] md:mr-[${margin[3]}] lg:mr-[${margin[4]}] xl:mr-[${margin[5]}] 2xl:mr-[${margin[6]}]`}
+          className={`z-10 cursor-pointer justify-self-end ${navbarMargin.marginRight}`}
           onClick={() =>
             setTheme(
               localStorage.getItem("nd-theme") === "light" ? "dark" : "light",
