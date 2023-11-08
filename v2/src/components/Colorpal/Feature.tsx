@@ -15,7 +15,7 @@ export default function Feature({
     // Feature Container
     <div className="mx-auto grid h-fit w-fit grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-16">
       <img
-        className="m-auto rounded-lg lg:order-last"
+        className="m-auto rounded-lg border-2 border-highlight duration-500 hover:shadow-[0_0_10px_0_highlight] lg:order-last"
         src={`/Colorpal/${image}`}
         alt={children}
       />

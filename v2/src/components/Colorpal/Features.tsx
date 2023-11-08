@@ -13,7 +13,7 @@ export default function Features() {
         </h2>
 
         {/* Features Grid */}
-        <div className="mx-6 mt-12 grid gap-[6rem] xl:mx-0">
+        <div className="mx-10 mt-12 grid gap-[6rem] xl:mx-0">
           <Feature
             infoOrder="first"
             image="Eyedropper.gif"

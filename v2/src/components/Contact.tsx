@@ -32,7 +32,7 @@ export default function Contact({ title }: { title: ReactNode }) {
   return (
     <section
       id="contact"
-      className="h-screen min-h-[800px] w-full bg-primary p-4"
+      className="h-screen min-h-[800px] w-full bg-primary p-8"
     >
       {/* Container */}
       <div className="mx-auto flex h-full max-w-fit flex-col items-center justify-center">

@@ -50,13 +50,13 @@ export default function Home({
         {/* Name and typed */}
         <div>
           {h2Title && (
-            <h2 className="m-4 text-xl font-bold text-text 2sm:text-3xl sm:text-5xl lg:my-4 lg:text-5xl">
+            <h2 className="m-4 text-2xl font-bold text-text 2sm:text-3xl sm:text-5xl lg:my-4 lg:text-5xl">
               {h2Title}
             </h2>
           )}
 
           {h1Title && (
-            <h1 className="m-4 text-3xl font-bold text-text 2sm:text-5xl sm:text-7xl lg:my-4 lg:text-8xl">
+            <h1 className="m-4 text-4xl font-bold text-text 2sm:text-5xl sm:text-7xl lg:my-4 lg:text-8xl">
               {h1Title}
             </h1>
           )}
@@ -68,7 +68,7 @@ export default function Home({
           )}
 
           {typedInfo && (
-            <h2 className="m-4 max-w-[700px] text-[1rem] font-bold text-text 2sm:text-2xl sm:text-3xl lg:text-4xl">
+            <h2 className="m-4 max-w-[700px] text-xl font-bold text-text 2sm:text-2xl sm:text-3xl lg:text-4xl">
               {typedInfo.textBefore && `${typedInfo.textBefore} `}
               <span className="text-highlight" ref={typedElem} />
             </h2>
@@ -104,7 +104,7 @@ export default function Home({
               >
                 <IconContext.Provider
                   value={{
-                    className: "text-xl sm:text-3xl",
+                    className: "text-2xl sm:text-3xl",
                   }}
                 >
                   <link.image />

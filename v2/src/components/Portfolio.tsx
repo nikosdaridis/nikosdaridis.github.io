@@ -16,10 +16,10 @@ export default function Portfolio() {
         </h2>
 
         {/* Projects Grid */}
-        <div className="mx-8 grid grid-cols-1 gap-16 py-8 text-center md:grid-cols-2 lg:mx-0 xl:grid-cols-3">
+        <div className="mx-14 grid grid-cols-1 gap-16 py-8 text-center md:grid-cols-2 lg:mx-0 xl:grid-cols-3">
           <Project
             image="ColorPal.jpg"
-            description="Chrome extension color tool to extract any pixel from the screen, pick any color from a palette and save favorite colors"
+            description="Chrome extension for picking colors and multiple color tools"
             techStack="TypeScript, HTML, CSS"
             buttons={[
               {

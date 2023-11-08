@@ -42,13 +42,13 @@ export default function Project({
         >
           {buttons.map((button) => (
             <a
-              className="m-2 flex justify-around rounded-lg border-2 border-highlight p-3 duration-300 hover:border-highlight hover:bg-highlight"
+              className="m-2 flex justify-around rounded-lg border-2 border-highlight p-3 duration-300 hover:border-highlight hover:bg-highlight 2sm:mx-4"
               href={button.link}
               target="_blank"
               rel="noreferrer"
               key={button.link}
             >
-              <div className="grid items-center whitespace-nowrap text-xs font-semibold text-text 2sm:flex 2sm:gap-2 2sm:text-sm">
+              <div className="grid items-center whitespace-nowrap text-xs font-semibold text-text 2sm:flex 2sm:gap-2">
                 <button.image size={25} className="mx-auto mb-2 2sm:m-0" />
                 {button.name}
               </div>

@@ -37,12 +37,7 @@ export default function Homepage({
       <Navbar
         theme={theme}
         setTheme={setTheme}
-        navbarMargin={{
-          marginLeft:
-            "ml-[1rem] 2sm:ml-[4rem] sm:ml-[6rem] md:ml-[4rem] lg:ml-[8rem] xl:ml-[14rem] 2xl:ml-[20rem]",
-          marginRight:
-            "mr-[1rem] 2sm:mr-[4rem] sm:mr-[6rem] md:mr-[4rem] lg:mr-[8rem] xl:mr-[14rem] 2xl:mr-[20rem]",
-        }}
+        margin={["1rem", "4rem", "6rem", "4rem", "8rem", "14rem", "20rem"]}
         logoPath="/HomepageLogo.png"
         logoTitle=""
         menu={["Home", "Skills", "Portfolio", "Contact"]}
