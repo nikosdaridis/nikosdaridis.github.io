@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaChrome } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
@@ -7,17 +8,13 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Colorpal({
-  setFaviconTitle,
   theme,
   setTheme,
 }: {
-  setFaviconTitle: Function;
   theme: string;
   setTheme: Function;
 }) {
   useEffect(() => {
-    setFaviconTitle("/ColorpalLogo.png", "ColorPal - Advanced color tools");
-
     if (
       localStorage.getItem("nd-theme") === "dark" ||
       localStorage.getItem("nd-theme") === "light"
@@ -33,6 +30,16 @@ export default function Colorpal({
 
   return (
     <>
+      <Helmet>
+        <title>ColorPal - Advanced color tools</title>
+        <meta
+          name="description"
+          content="Browser extension to pick colors from the screen, make tints and shades and download your palette!"
+        />
+        <link rel="icon" href="/ColorpalLogo.png" />
+        <link rel="canonical" href="https://daridis.com/colorpal" />
+      </Helmet>
+
       <Navbar
         theme={theme}
         setTheme={setTheme}

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
@@ -8,17 +9,13 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Homepage({
-  setFaviconTitle,
   theme,
   setTheme,
 }: {
-  setFaviconTitle: Function;
   theme: string;
   setTheme: Function;
 }) {
   useEffect(() => {
-    setFaviconTitle("/HomepageLogo.png", "Nikos Daridis");
-
     if (
       localStorage.getItem("nd-theme") === "dark" ||
       localStorage.getItem("nd-theme") === "light"
@@ -34,6 +31,16 @@ export default function Homepage({
 
   return (
     <>
+      <Helmet>
+        <title>Nikos Daridis</title>
+        <meta
+          name="description"
+          content="I am a Software and Web Engineer. This is my portfolio website."
+        />
+        <link rel="icon" href="/HomepageLogo.png" />
+        <link rel="canonical" href="https://daridis.com/" />
+      </Helmet>
+
       <Navbar
         theme={theme}
         setTheme={setTheme}
