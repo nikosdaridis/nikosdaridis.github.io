@@ -22,22 +22,26 @@ export default function ColorpalOnboarding() {
             <img
               className="h-[40px] w-[40px]"
               src="/Colorpal/OnBoarding/Arrow.png"
+              alt="Arrow"
             />
             <p className="absolute right-[-75px] top-[50px] inline-flex w-[280px] flex-wrap items-center justify-center text-2xl font-semibold lg:right-[-90px]">
               Click extensions
               <img
                 className="mx-1 h-[25px] w-[25px]"
                 src="/Colorpal/OnBoarding/Extension.png"
+                alt="Extension"
               />
               and pin
               <img
                 className="mx-1 h-[25px] w-[25px]"
                 src="/Colorpal/OnBoarding/Pin.png"
+                alt="Pin"
               />
               ColorPal
               <img
                 className="mx-1 h-[25px] w-[25px]"
                 src="/Colorpal/OnBoarding/Icon.png"
+                alt="Colorpal"
               />
             </p>
           </div>
@@ -46,9 +50,9 @@ export default function ColorpalOnboarding() {
           <h2 className="text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] md:mt-[8rem] lg:mt-[0rem] lg:text-[6rem]">
             Get started
           </h2>
-          <h3 className="text-[1rem] font-semibold text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
+          <h1 className="text-[1rem] font-semibold text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
             How to use ColorPal
-          </h3>
+          </h1>
 
           {/* Cards Grid */}
           <div className="mx-6 mb-12 mt-8 grid grid-cols-1 gap-16 md:grid-cols-2 lg:mb-0 lg:grid-cols-3 xl:gap-24">

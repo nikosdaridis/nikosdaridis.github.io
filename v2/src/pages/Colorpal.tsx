@@ -91,7 +91,7 @@ export default function Colorpal({
         }}
         externalLinks={[
           {
-            link: "https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
+            link: "https://chromewebstore.google.com/detail/colorpal-color-picker-eye/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
             image: FaChrome,
             text: "Add to Chrome & Edge",
           },

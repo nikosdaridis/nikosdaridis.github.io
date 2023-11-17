@@ -25,7 +25,7 @@ export default function Portfolio() {
               {
                 name: "Web Store",
                 image: FaChrome,
-                link: "https://chrome.google.com/webstore/detail/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
+                link: "https://chromewebstore.google.com/detail/colorpal-color-picker-eye/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
               },
               {
                 name: "GitHub",
