@@ -18,6 +18,21 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <div className="mx-14 grid grid-cols-1 gap-16 py-8 text-center md:grid-cols-2 lg:mx-0 xl:grid-cols-3">
           <Project
+            image="eBanking.jpg"
+            description="ASP.NET Core MVC application with Entity Framework Core and Identity"
+            techStack="C#, JavaScript, HTML, CSS"
+            buttons={[
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/ebanking-asp-net-core",
+              },
+            ]}
+          >
+            eBanking
+          </Project>
+
+          <Project
             image="ColorPal.jpg"
             description="Chrome extension for picking colors and multiple color tools"
             techStack="TypeScript, HTML, CSS"
