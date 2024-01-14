@@ -2,6 +2,9 @@ import { Helmet } from "react-helmet-async";
 import OnboardingCard from "../components/Colorpal/OnboardingCard";
 
 export default function ColorpalOnboarding() {
+  const isChromeOS = navigator.userAgent.indexOf("CrOS") > -1;
+  const isOpera = navigator.userAgent.indexOf("OP") > -1;
+
   return (
     <>
       <Helmet>
@@ -14,11 +17,11 @@ export default function ColorpalOnboarding() {
         <link rel="canonical" href="https://daridis.com/colorpal/onboarding" />
       </Helmet>
 
-      <section className="flex h-max min-h-screen w-full items-center justify-center bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
+      <section className="grid h-max min-h-screen w-full items-center justify-center bg-gradient-radial from-[#f0f6ff] via-[#f5f9ff] to-[#fafcff] text-[#1486ff]">
         {/* Container */}
         <div className="mx-auto flex h-full w-full max-w-fit flex-col items-center justify-center p-4 text-center">
           {/* Pin */}
-          <div className="absolute right-[80px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[97px]">
+          <div className="absolute right-[105px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[125px]">
             <img
               className="h-[40px] w-[40px]"
               src="/Colorpal/OnBoarding/Arrow.png"
@@ -69,6 +72,15 @@ export default function ColorpalOnboarding() {
             />
           </div>
         </div>
+
+        {/* EyeDropper Not Supported */}
+        {(isChromeOS || isOpera) && (
+          <div className="mb-4 flex justify-center self-end">
+            <h4 className="mx-4 text-sm 2sm:mx-0 2sm:text-base md:text-lg lg:text-xl">
+              EyeDropper not supported on {isChromeOS ? "ChromeOS" : "Opera"}
+            </h4>
+          </div>
+        )}
       </section>
     </>
   );
