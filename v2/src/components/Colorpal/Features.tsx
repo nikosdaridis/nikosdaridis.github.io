@@ -16,14 +16,14 @@ export default function Features() {
         <div className="mx-10 mt-12 grid gap-[6rem] xl:mx-0">
           <Feature
             infoOrder="first"
-            image="Eyedropper.gif"
-            description="The Eyedropper tool lets users select colors directly from their screen with pixel-level precision. It simplifies color matching and replication in various developing, design and editing tasks."
+            image="EyeDropper.gif"
+            description="The EyeDropper tool lets users select colors directly from their screen with pixel-level precision. It simplifies color matching and replication in various developing, design and editing tasks."
             button={{
               link: "https://chromewebstore.google.com/detail/colorpal-color-picker-eye/mbnpegpimodgjmlbfhkkdgbcfjmgpoad",
               text: "Add Now",
             }}
           >
-            Eyedropper
+            EyeDropper
           </Feature>
 
           <Feature

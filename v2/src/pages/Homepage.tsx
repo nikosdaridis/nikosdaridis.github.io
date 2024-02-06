@@ -16,17 +16,17 @@ export default function Homepage({
   setTheme: Function;
 }) {
   useEffect(() => {
-    if (
-      localStorage.getItem("nd-theme") === "dark" ||
-      localStorage.getItem("nd-theme") === "light"
-    )
-      setTheme(localStorage.getItem("nd-theme"));
-    else
-      setTheme(
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light",
-      );
+    const storedTheme = localStorage.getItem("nd-theme");
+    const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+
+    setTheme(
+      storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : defaultTheme,
+    );
   }, []);
 
   return (
