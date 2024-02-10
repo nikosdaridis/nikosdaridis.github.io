@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import OnboardingCard from "../components/Colorpal/OnboardingCard";
+import Features from "../components/Colorpal/Features";
 
 export default function ColorpalOnboarding() {
-  const isChromeOS = navigator.userAgent.indexOf("CrOS") > -1;
-  const isOpera = navigator.userAgent.indexOf("OP") > -1;
+  const isChromeOS = navigator.userAgent.includes("CrOS");
+  const isOpera = navigator.userAgent.includes("OP");
 
   return (
     <>
@@ -21,7 +21,7 @@ export default function ColorpalOnboarding() {
         {/* Container */}
         <div className="mx-auto flex h-full w-full max-w-fit flex-col items-center justify-center p-4 text-center">
           {/* Pin */}
-          <div className="absolute right-[105px] top-[15px] hidden animate-bounce md:inline-flex lg:right-[125px]">
+          <div className="absolute right-[108px] top-[15px] hidden animate-bounce md:inline-flex">
             <img
               className="h-[40px] w-[40px]"
               src="/Colorpal/OnBoarding/Arrow.png"
@@ -49,38 +49,25 @@ export default function ColorpalOnboarding() {
             </p>
           </div>
 
+          {/* EyeDropper Not Supported */}
+          {(isChromeOS || isOpera) && (
+            <div className="flex justify-center">
+              <h4 className="mx-4 text-sm 2sm:mx-0 2sm:text-base md:text-lg lg:text-xl">
+                EyeDropper not supported on {isChromeOS ? "ChromeOS" : "Opera"}
+              </h4>
+            </div>
+          )}
+
           {/* Title */}
-          <h2 className="text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] md:mt-[8rem] lg:mt-[0rem] lg:text-[6rem]">
+          <h2 className="text-[2rem] font-bold text-text 2sm:text-[3.8rem] sm:text-[5rem] md:mt-[8rem] lg:text-[6rem] xl:mt-[0rem]">
             Get started
           </h2>
           <h1 className="text-[1rem] font-semibold text-text 2sm:text-[1.8rem] sm:text-[2.5rem]">
             How to use ColorPal
           </h1>
 
-          {/* Cards Grid */}
-          <div className="mx-6 mb-12 mt-8 grid grid-cols-1 gap-16 md:grid-cols-2 lg:mb-0 lg:grid-cols-3 xl:gap-24">
-            <OnboardingCard
-              image="OpenColorpal"
-              text="Open ColorPal in the top right"
-            />
-
-            <OnboardingCard image="UIExplanation" text="Basic UI explanation" />
-
-            <OnboardingCard
-              image="Customization"
-              text="Plenty of customization"
-            />
-          </div>
+          <Features showButton={false} />
         </div>
-
-        {/* EyeDropper Not Supported */}
-        {(isChromeOS || isOpera) && (
-          <div className="mb-4 flex justify-center self-end">
-            <h4 className="mx-4 text-sm 2sm:mx-0 2sm:text-base md:text-lg lg:text-xl">
-              EyeDropper not supported on {isChromeOS ? "ChromeOS" : "Opera"}
-            </h4>
-          </div>
-        )}
       </section>
     </>
   );

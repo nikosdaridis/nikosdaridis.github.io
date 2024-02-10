@@ -51,13 +51,11 @@ export default function Homepage({
             "mr-[1rem] 2sm:mr-[4rem] sm:mr-[6rem] md:mr-[4rem] lg:mr-[8rem] xl:mr-[14rem] 2xl:mr-[20rem]",
         }}
         logoPath="/HomepageLogo.png"
-        logoTitle=""
         menu={["Home", "Skills", "Portfolio", "Contact"]}
       />
       <Home
         h2Title="Hello, I'm"
         h1Title="Nikos Daridis"
-        description={null}
         typedInfo={{
           textBefore: "A",
           strings: ["Software Engineer", "Web Engineer"],

@@ -11,9 +11,9 @@ export default function Home({
   internalLink,
   externalLinks,
 }: {
-  h2Title: string;
-  h1Title: string;
-  description: ReactNode;
+  h2Title?: string;
+  h1Title?: string;
+  description?: ReactNode;
   typedInfo: {
     textBefore: string;
     strings: string[];

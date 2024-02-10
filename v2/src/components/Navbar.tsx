@@ -17,7 +17,7 @@ export default function Navbar({
   setTheme: Function;
   navbarMargin: { marginLeft: string; marginRight: string };
   logoPath: string;
-  logoTitle: string;
+  logoTitle?: string;
   menu: string[];
 }) {
   const [hamburger, setHamburger] = useState(false);

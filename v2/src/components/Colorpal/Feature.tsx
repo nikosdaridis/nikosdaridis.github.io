@@ -8,7 +8,7 @@ export default function Feature({
   infoOrder: string;
   image: string;
   description: string;
-  button: { link: string; text: string };
+  button: { link: string; text: string } | false;
   children: string;
 }) {
   return (
@@ -24,17 +24,19 @@ export default function Feature({
         <h2 className="text-lg font-bold 2sm:text-2xl md:text-3xl xl:text-4xl">
           {children}
         </h2>
+        <p className="max-w-[500px] text-justify 2sm:text-lg">{description}</p>
 
-        <p className="max-w-[500px] text-start 2sm:text-lg">{description}</p>
-
-        <a
-          className="mx-auto h-fit w-fit rounded-xl border-2 border-highlight p-[10px] text-sm font-semibold text-text duration-300 hover:border-highlight hover:bg-highlight 2sm:text-base"
-          href={button.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {button.text}
-        </a>
+        {/* Button */}
+        {button && (
+          <a
+            className="mx-auto h-fit w-fit rounded-xl border-2 border-highlight p-[10px] text-sm font-semibold text-text duration-300 hover:border-highlight hover:bg-highlight 2sm:text-base"
+            href={button.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {button.text}
+          </a>
+        )}
       </div>
     </div>
   );

@@ -55,7 +55,6 @@ export default function Colorpal({
       />
       <Home
         h2Title="Advanced color tools"
-        h1Title=""
         description={
           <>
             <span className="text-highlight">Free</span> and powerful browser
@@ -98,7 +97,7 @@ export default function Colorpal({
         ]}
       />
 
-      <Features />
+      <Features title="Features" />
       <Contact title="Contact" />
       <Footer />
     </>
