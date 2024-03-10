@@ -16,7 +16,7 @@ export default function Features({
       <div className="mx-auto flex h-full w-full max-w-fit flex-col justify-center text-center">
         {title && (
           <h2 className="mt-4 inline pb-8 text-4xl font-bold text-text lg:text-6xl">
-            Features
+            {title}
           </h2>
         )}
 

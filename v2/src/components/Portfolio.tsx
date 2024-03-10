@@ -18,6 +18,21 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <div className="mx-14 grid grid-cols-1 gap-16 py-8 text-center md:grid-cols-2 lg:mx-0 xl:grid-cols-3">
           <Project
+            image="QRBarcodeApp.jpg"
+            description="Maui Blazor Hybrid QR & Barcode Scanner and Generator Mobile App"
+            techStack="C#, JavaScript, Tailwind CSS"
+            buttons={[
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/qr-barcode-maui-blazor-hybrid",
+              },
+            ]}
+          >
+            QR & Barcode App
+          </Project>
+
+          <Project
             image="eBanking.jpg"
             description="ASP.NET Core MVC application with Entity Framework Core and Identity"
             techStack="C#, JavaScript, HTML, CSS"
