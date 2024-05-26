@@ -18,9 +18,29 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <div className="mx-14 grid grid-cols-1 gap-16 py-8 text-center md:grid-cols-2 lg:mx-0 xl:grid-cols-3">
           <Project
+            image="osrspriceswiki.jpg"
+            description="OldSchool Runescape Live GE Prices Utilities"
+            techStack="Blazor, C#, Typescript, Tailwind"
+            buttons={[
+              {
+                name: "Website",
+                image: TbWorldWww,
+                link: "https://osrsprices.wiki",
+              },
+              {
+                name: "GitHub",
+                image: FaGithub,
+                link: "https://github.com/nikosdaridis/osrs-prices-wiki",
+              },
+            ]}
+          >
+            osrsprices.wiki
+          </Project>
+
+          <Project
             image="QRBarcodeApp.jpg"
             description="Maui Blazor Hybrid QR & Barcode Scanner and Generator Mobile App"
-            techStack="C#, JavaScript, Tailwind CSS"
+            techStack="Maui Blazor, C#, Typescript, Tailwind"
             buttons={[
               {
                 name: "GitHub",
@@ -75,7 +95,7 @@ export default function Portfolio() {
           <Project
             image="Portfolio.jpg"
             description="Responsive minimalist portfolio website"
-            techStack="React, TypeScript, Tailwind CSS"
+            techStack="React, TypeScript, Tailwind"
             buttons={[
               {
                 name: "Website v2",
@@ -95,61 +115,6 @@ export default function Portfolio() {
             ]}
           >
             Portfolio v2
-          </Project>
-
-          <Project
-            image="ProjectSouls.jpg"
-            description="Tech demo clone of Dark Souls"
-            techStack="C#, Unity"
-            buttons={[
-              {
-                name: "Download",
-                image: BsDownload,
-                link: "https://nikosdaridis.itch.io/project-souls",
-              },
-              {
-                name: "GitHub",
-                image: FaGithub,
-                link: "https://github.com/nikosdaridis/project-souls",
-              },
-            ]}
-          >
-            Project Souls
-          </Project>
-
-          <Project
-            image="2DBezierPathTool.jpg"
-            description="Unity editor tool to create and edit 2d bezier paths"
-            techStack="C#, Unity"
-            buttons={[
-              {
-                name: "GitHub",
-                image: FaGithub,
-                link: "https://github.com/nikosdaridis/2d-bezier-path-tool",
-              },
-            ]}
-          >
-            2D Bezier Path Tool
-          </Project>
-
-          <Project
-            image="SpaceCowboys.jpg"
-            description="2d multiplayer fighting game"
-            techStack="C#, Unity"
-            buttons={[
-              {
-                name: "Download",
-                image: BsDownload,
-                link: "https://nikosdaridis.itch.io/space-cowboys",
-              },
-              {
-                name: "GitHub",
-                image: FaGithub,
-                link: "https://github.com/nikosdaridis/space-cowboys",
-              },
-            ]}
-          >
-            Space Cowboys
           </Project>
         </div>
       </div>
