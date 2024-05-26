@@ -1,7 +1,6 @@
 import Project from "./Project";
 import { FaGithub, FaChrome } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
-import { BsDownload } from "react-icons/bs";
 
 export default function Portfolio() {
   return (
