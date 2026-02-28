@@ -1,0 +1,95 @@
+<section id="contact">
+  <h2 class="text-text-bright mb-8 font-mono text-2xl tracking-[-0.02em]">
+    contact
+  </h2>
+
+  <form id="contact-form" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      required
+      class="contact-input"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+      class="contact-input"
+    />
+
+    <textarea
+      name="message"
+      placeholder="Message"
+      required
+      rows="5"
+      class="contact-input resize-none sm:col-span-2"></textarea>
+
+    <button type="submit" class="contact-button sm:col-span-2">
+      Send Message
+    </button>
+
+    <p id="form-status" class="hidden text-sm sm:col-span-2"></p>
+  </form>
+</section>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    let emailjsLoaded = false;
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+
+      function resetButton() {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      }
+
+      function sendForm() {
+        emailjs
+          .sendForm(
+            "service_csks0d8",
+            "template_l4aoenf",
+            form,
+            "tkKxnFTTTampSyr3G",
+          )
+          .then(function () {
+            status.textContent = "Message sent successfully";
+            status.className = "text-sm text-green-500 sm:col-span-2";
+            status.classList.remove("hidden");
+            form.reset();
+            resetButton();
+            setTimeout(function () {
+              status.classList.add("hidden");
+            }, 4000);
+          })
+          .catch(function () {
+            status.textContent = "There was an error. Try again later";
+            status.className = "text-sm text-red-500 sm:col-span-2";
+            status.classList.remove("hidden");
+            resetButton();
+          });
+      }
+
+      if (emailjsLoaded) {
+        sendForm();
+      } else {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+        script.onload = function () {
+          emailjsLoaded = true;
+          sendForm();
+        };
+        document.head.appendChild(script);
+      }
+    });
+  })();
+</script>

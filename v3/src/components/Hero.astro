@@ -1,0 +1,24 @@
+---
+import ArrowLink from "./ArrowLink.astro";
+import { socialLinks } from "../data/social";
+---
+
+<section id="hero" class="pb-18">
+  <h1 class="text-text-bright font-mono text-5xl tracking-[-0.02em]">
+    nikos daridis
+  </h1>
+
+  <p class="text-muted">software engineer</p>
+
+  <p class="text-text mt-4 max-w-2xl text-base">
+    turning complex problems into lasting, impactful solutions
+  </p>
+
+  <div class="mt-4 flex flex-wrap items-center gap-6">
+    {
+      socialLinks.map((link) => (
+        <ArrowLink href={link.url} label={link.label} external />
+      ))
+    }
+  </div>
+</section>

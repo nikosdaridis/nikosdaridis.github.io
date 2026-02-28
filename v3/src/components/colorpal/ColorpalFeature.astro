@@ -1,0 +1,47 @@
+---
+import ArrowLink from "../ArrowLink.astro";
+import type { ColorpalFeature } from "../../data/colorpal";
+
+interface Props {
+  feature: ColorpalFeature;
+  reversed: boolean;
+  showButton?: boolean;
+}
+
+const { feature, reversed, showButton = true } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex flex-col gap-8 md:items-center md:gap-12",
+    reversed ? "md:flex-row-reverse" : "md:flex-row",
+  ]}
+>
+  <div class="md:w-1/2">
+    <img
+      src={feature.image}
+      alt={feature.title}
+      class="border-bg-3 w-full border-2"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="md:w-1/2">
+    <h3 class="text-text-bright mb-3 font-mono text-lg">
+      {feature.title}
+    </h3>
+
+    <p class:list={["text-sm text-muted", showButton && "mb-4"]}>
+      {feature.description}
+    </p>
+    {
+      showButton && (
+        <ArrowLink
+          href={feature.buttonUrl}
+          label={feature.buttonLabel}
+          external
+        />
+      )
+    }
+  </div>
+</div>

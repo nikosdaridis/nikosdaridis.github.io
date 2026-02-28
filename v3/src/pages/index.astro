@@ -1,0 +1,20 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<SiteLayout
+  title="Nikos Daridis"
+  description="Nikos Daridis — Software Engineer"
+  logoLabel=""
+  navLinks={[
+    { href: "#projects", label: "projects" },
+    { href: "#contact", label: "contact" },
+  ]}
+>
+  <Hero />
+  <ProjectsSection />
+  <ContactSection />
+</SiteLayout>

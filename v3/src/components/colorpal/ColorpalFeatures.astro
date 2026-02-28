@@ -1,0 +1,18 @@
+---
+import { colorpalFeatures } from "../../data/colorpal";
+import ColorpalFeature from "./ColorpalFeature.astro";
+---
+
+<section id="features" class="pb-18">
+  <h2 class="text-text-bright mb-8 font-mono text-2xl tracking-[-0.02em]">
+    features
+  </h2>
+
+  <div class="space-y-16">
+    {
+      colorpalFeatures.map((feature, index) => (
+        <ColorpalFeature feature={feature} reversed={index % 2 !== 0} />
+      ))
+    }
+  </div>
+</section>

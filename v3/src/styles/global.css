@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGroteskVariable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --color-bg: hsl(220, 10%, 8%);
+  --color-bg-2: hsl(220, 10%, 11%);
+  --color-bg-3: hsl(220, 10%, 16%);
+  --color-text: hsl(220, 30%, 80%);
+  --color-text-bright: hsl(220, 45%, 90%);
+  --color-muted: hsl(220, 14%, 55%);
+  --color-muted-dark: hsl(220, 11%, 35%);
+  --color-accent: hsl(190, 70%, 50%);
+}
+
+@keyframes pin-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.animate-pin-bounce {
+  animation: pin-bounce 2s ease-in-out 10;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.75;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-text-bright);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-bright);
+}
+
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.7em;
+  height: 1.2em;
+}
+
+.nav-icon-shaft {
+  position: relative;
+  display: block;
+  width: 1.15em;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-70deg);
+  transition: transform 380ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+}
+
+.nav-icon-shaft::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  background: transparent;
+  transform: translateY(-50%) rotate(45deg) scale(0);
+  transform-origin: center center;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover .nav-icon-shaft {
+  transform: translateX(-0.225em) rotate(0deg);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover .nav-icon-shaft::after {
+  transform: translateY(-50%) rotate(45deg) scale(1);
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1) 80ms;
+}
+
+.project-image-link {
+  display: block;
+  position: relative;
+}
+
+.project-image-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-muted-dark);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    inset 0.3s ease;
+  pointer-events: none;
+}
+
+.project-image-link:hover::after {
+  opacity: 1;
+  inset: -5px;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--color-text);
+  background-color: var(--color-bg-2);
+  border: 2px solid var(--color-bg-3);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-input::placeholder {
+  color: var(--color-muted-dark);
+}
+
+.contact-input:focus {
+  border-color: var(--color-muted);
+}
+
+.contact-button {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 0.75rem 2rem;
+  color: var(--color-text);
+  background-color: transparent;
+  border: 2px solid var(--color-bg-3);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.contact-button:hover {
+  border-color: var(--color-muted);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

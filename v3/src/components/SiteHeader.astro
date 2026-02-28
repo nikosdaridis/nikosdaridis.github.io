@@ -1,0 +1,31 @@
+---
+import ArrowLink from "./ArrowLink.astro";
+import type { NavLink } from "../types";
+
+interface Props {
+  favicon?: string;
+  logoLabel: string;
+  navLinks: NavLink[];
+}
+
+const { favicon, logoLabel, navLinks } = Astro.props;
+---
+
+<header class="py-8">
+  <nav class="max-w-212 mx-auto flex items-center justify-between px-6">
+    <div
+      class="text-text flex items-center gap-2 font-mono text-sm tracking-wide"
+    >
+      {favicon && <img src={favicon} alt="" class="size-5" />}
+      {logoLabel}
+    </div>
+
+    <div class="flex items-center gap-6">
+      {
+        navLinks.map((link) => (
+          <ArrowLink href={link.href} label={link.label} />
+        ))
+      }
+    </div>
+  </nav>
+</header>

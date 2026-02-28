@@ -1,0 +1,22 @@
+{
+  "name": "nikosdaridis-portfolio-v3",
+  "type": "module",
+  "version": "3.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0"
+  }
+}

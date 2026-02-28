@@ -1,0 +1,22 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  favicon: string;
+}
+
+const { title, description, favicon } = Astro.props;
+const headFavicon = favicon || "/favicon.png";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} favicon={headFavicon} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

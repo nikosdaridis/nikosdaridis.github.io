@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ColorpalFeature from "../../components/colorpal/ColorpalFeature.astro";
+import { colorpalFeatures, COLORPAL_DESCRIPTION } from "../../data/colorpal";
+---
+
+<BaseLayout
+  title="ColorPal - Get Started"
+  description={COLORPAL_DESCRIPTION}
+  favicon="/colorpal-favicon.png"
+>
+  <!-- Pin instruction (desktop only) -->
+  <div
+    class="animate-pin-bounce text-muted mr-28 hidden items-center gap-1 px-6 py-4 md:ml-auto md:flex md:w-fit"
+  >
+    <p class="flex flex-wrap items-center">
+      Click extensions
+      <img
+        src="/colorpal/OnBoarding/Extension.png"
+        alt="Extension"
+        class="size-5 mx-1"
+      />
+      and pin
+      <img src="/colorpal/OnBoarding/Pin.png" alt="Pin" class="size-5 mx-1" />
+      ColorPal
+      <img
+        src="/colorpal/OnBoarding/Icon.png"
+        alt="ColorPal"
+        class="size-5 mx-1"
+      />
+    </p>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      class="size-8"
+      aria-hidden="true"
+    >
+      <path d="M6 42 C18 42, 38 26, 38 6"></path>
+      <polyline points="31,13 38,6 45,13"></polyline>
+    </svg>
+  </div>
+
+  <main class="max-w-212 mx-auto px-6 py-4">
+    <h1 class="text-text-bright font-mono text-5xl tracking-[-0.02em]">
+      Get started
+    </h1>
+    <p class="text-muted mt-4 text-xl">How to use ColorPal</p>
+
+    <div class="mt-12 space-y-16">
+      {
+        colorpalFeatures.map((feature, index) => (
+          <ColorpalFeature
+            feature={feature}
+            reversed={index % 2 !== 0}
+            showButton={false}
+          />
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>

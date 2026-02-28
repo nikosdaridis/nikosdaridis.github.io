@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daridis.com/sitemap-index.xml

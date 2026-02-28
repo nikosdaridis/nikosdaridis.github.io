@@ -1,0 +1,22 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import ColorpalHero from "../../components/colorpal/ColorpalHero.astro";
+import ColorpalFeatures from "../../components/colorpal/ColorpalFeatures.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import { COLORPAL_DESCRIPTION } from "../../data/colorpal";
+---
+
+<SiteLayout
+  title="ColorPal - Advanced color tools"
+  description={COLORPAL_DESCRIPTION}
+  favicon="/colorpal-favicon.png"
+  logoLabel="colorpal"
+  navLinks={[
+    { href: "#features", label: "features" },
+    { href: "#contact", label: "contact" },
+  ]}
+>
+  <ColorpalHero />
+  <ColorpalFeatures />
+  <ContactSection />
+</SiteLayout>

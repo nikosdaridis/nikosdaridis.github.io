@@ -1,0 +1,20 @@
+---
+import ArrowLink from "../ArrowLink.astro";
+import { CHROME_STORE_URL } from "../../data/colorpal";
+---
+
+<section id="home" class="pb-18">
+  <h1 class="text-text-bright font-mono text-5xl tracking-[-0.02em]">
+    colorpal
+  </h1>
+
+  <p class="text-text mt-4 max-w-2xl">
+    free and powerful browser extension that helps you pick colors from the
+    screen, make tints and shades and download your palette.
+  </p>
+
+  <div class="mt-4 flex flex-wrap items-center gap-6">
+    <ArrowLink href="#features" label="discover features" />
+    <ArrowLink href={CHROME_STORE_URL} label="add to chrome & edge" external />
+  </div>
+</section>

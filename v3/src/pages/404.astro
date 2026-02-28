@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArrowLink from "../components/ArrowLink.astro";
+---
+
+<BaseLayout
+  title="404 Page Not Found"
+  description="The page you're looking for doesn't exist."
+  favicon="/favicon.png"
+>
+  <main class="max-w-212 mx-auto px-6 py-32">
+    <h1 class="text-text-bright mb-4 font-mono text-6xl">404</h1>
+
+    <p class="text-muted mb-8">Page not found</p>
+
+    <div class="flex items-center gap-6">
+      <ArrowLink href="/" label="home" />
+      <ArrowLink href="/colorpal" label="colorpal" />
+    </div>
+  </main>
+</BaseLayout>
