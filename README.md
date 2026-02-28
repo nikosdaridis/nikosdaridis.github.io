@@ -9,13 +9,10 @@
 </p>
 <p align="center">
   Previous iterations:
-  <a href="https://nikosdaridis.github.io/v1" target="_blank">v1</a> built with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
+  v1 built with HTML, CSS and JavaScript
   •
-  <a href="https://nikosdaridis.github.io/v2" target="_blank">v2</a> built with <a href="https://react.dev" target="_blank">React</a>, <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>
+  v2 built with React, TypeScript and Tailwind CSS
 </p>
-<div align="center">
-<a href="https://daridis.com"><img alt="Screenshot" src="https://raw.githubusercontent.com/nikosdaridis/nikosdaridis.github.io/main/v3/public/portfolio/Portfolio.jpg"></a>
-</div>
 
 ## 🛠 Installation
 

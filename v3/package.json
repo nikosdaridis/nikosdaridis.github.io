@@ -8,10 +8,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.0",
     "astro": "^5.18.0",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=22.0.0"

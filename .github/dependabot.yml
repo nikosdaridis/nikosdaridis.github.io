@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Configuration for npm
+  - package-ecosystem: "npm"
+    directory: "/v3"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "automerge"
