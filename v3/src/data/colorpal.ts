@@ -17,7 +17,7 @@ export const colorpalFeatures: ColorpalFeature[] = [
     title: "EyeDropper",
     description:
       "The EyeDropper tool lets users select colors directly from their screen with pixel-level precision. It simplifies color matching and replication in various developing, design and editing tasks.",
-    image: "/colorpal/EyeDropper.gif",
+    image: "/colorpal/eyedropper.gif",
     buttonLabel: "Add Now",
     buttonUrl: CHROME_STORE_URL,
   },
@@ -25,7 +25,7 @@ export const colorpalFeatures: ColorpalFeature[] = [
     title: "Color Picker",
     description:
       "The Color Picker tool is a user-friendly utility to select specific colors from a palette. It streamlines the process of choosing colors, offering efficiency and precision in color selection.",
-    image: "/colorpal/ColorPicker.gif",
+    image: "/colorpal/colorpicker.gif",
     buttonLabel: "Try it Now",
     buttonUrl: CHROME_STORE_URL,
   },
@@ -33,7 +33,7 @@ export const colorpalFeatures: ColorpalFeature[] = [
     title: "Tints and Shades",
     description:
       "The Tints and Shades tool is a handy resource for adjusting colors by adding white (tints) or black (shades). It helps create variations of a base color, achieving a range of lighter and darker tones with ease.",
-    image: "/colorpal/TintsandShades.gif",
+    image: "/colorpal/tintsandshades.gif",
     buttonLabel: "Add Now",
     buttonUrl: CHROME_STORE_URL,
   },
@@ -41,7 +41,7 @@ export const colorpalFeatures: ColorpalFeature[] = [
     title: "Move and Delete",
     description:
       "The Move tool allows users to change colors position, facilitating organization and arrangement. The Delete tool removes unwanted colors, streamlining the color selection process and enhancing overall efficiency.",
-    image: "/colorpal/MoveandDelete.gif",
+    image: "/colorpal/moveanddelete.gif",
     buttonLabel: "Try it Now",
     buttonUrl: CHROME_STORE_URL,
   },
@@ -49,7 +49,7 @@ export const colorpalFeatures: ColorpalFeature[] = [
     title: "Download Image and CSV",
     description:
       "The Download Image tool enables users to save their color palette as an image file, making it easy to share and reference. The Download CSV tool allows users to export their colors codes to a CSV file, which can be useful for managing and cataloging color information in a structured format.",
-    image: "/colorpal/DownloadPNGandCSV.gif",
+    image: "/colorpal/downloadpng.gif",
     buttonLabel: "Add Now",
     buttonUrl: CHROME_STORE_URL,
   },
