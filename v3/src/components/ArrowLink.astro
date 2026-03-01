@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { href, label, external = false, class: className } = Astro.props;
-const normalizedLabel = label.toLowerCase().replace(" ", "-");
+const normalizedLabel = label.toLowerCase().replaceAll(" ", "-");
 ---
 
 <a
