@@ -7,7 +7,7 @@
     <input
       type="text"
       name="name"
-      placeholder="Name"
+      placeholder="name"
       required
       class="contact-input"
     />
@@ -15,21 +15,19 @@
     <input
       type="email"
       name="email"
-      placeholder="Email"
+      placeholder="email"
       required
       class="contact-input"
     />
 
     <textarea
       name="message"
-      placeholder="Message"
+      placeholder="message"
       required
       rows="5"
       class="contact-input resize-none sm:col-span-2"></textarea>
 
-    <button type="submit" class="contact-button sm:col-span-2">
-      Send Message
-    </button>
+    <button type="submit" class="contact-button sm:col-span-2"> send </button>
 
     <p id="form-status" class="hidden text-sm sm:col-span-2"></p>
   </form>
@@ -45,11 +43,11 @@
       event.preventDefault();
       const submitButton = form.querySelector('button[type="submit"]');
       submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
+      submitButton.textContent = "sending...";
 
       function resetButton() {
         submitButton.disabled = false;
-        submitButton.textContent = "Send Message";
+        submitButton.textContent = "send";
       }
 
       function sendForm() {
@@ -61,7 +59,7 @@
             "tkKxnFTTTampSyr3G",
           )
           .then(function () {
-            status.textContent = "Message sent successfully";
+            status.textContent = "message sent successfully";
             status.className = "text-sm text-green-500 sm:col-span-2";
             status.classList.remove("hidden");
             form.reset();
@@ -71,7 +69,7 @@
             }, 4000);
           })
           .catch(function () {
-            status.textContent = "There was an error. Try again later";
+            status.textContent = "there was an error, try again later";
             status.className = "text-sm text-red-500 sm:col-span-2";
             status.classList.remove("hidden");
             resetButton();
