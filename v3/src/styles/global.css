@@ -131,6 +131,7 @@ a:hover {
 .project-image-link {
   display: block;
   position: relative;
+  width: fit-content;
 }
 
 .project-image-link::after {

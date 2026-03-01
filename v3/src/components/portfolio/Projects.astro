@@ -1,6 +1,6 @@
 ---
-import ArrowLink from "./ArrowLink.astro";
-import { projects } from "../data/projects";
+import ArrowLink from "../ArrowLink.astro";
+import { projects } from "../../data/projects";
 ---
 
 <section id="projects" class="pb-18">
@@ -18,24 +18,24 @@ import { projects } from "../data/projects";
             href={project.links[0].url}
             target="_blank"
             rel="noopener noreferrer"
-            class="project-image-link mb-4 block"
+            class="project-image-link mx-auto mb-4 block"
           >
             <img
               src={project.image}
               alt={project.name}
-              class="w-full"
+              class="max-h-100 max-w-full"
               loading="lazy"
             />
           </a>
 
           <h3 class="text-text-bright mb-1 font-mono text-lg">
-            {project.name}
+            {project.name.toLowerCase()}
           </h3>
 
-          <p class="text-muted mb-2 text-sm">{project.summary}</p>
+          <p class="text-muted mb-2 text-sm">{project.summary.toLowerCase()}</p>
 
           <p class="text-muted-dark mb-3 font-mono text-xs">
-            {project.techStack}
+            {project.techStack.toLowerCase()}
           </p>
 
           <div class="flex flex-wrap gap-4">

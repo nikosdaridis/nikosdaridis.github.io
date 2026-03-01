@@ -11,10 +11,55 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: "ColorPal",
+    summary: "Color picker and palette browser extension",
+    techStack: "Blazor, C#, TypeScript, Tailwind",
+    image: "/projects/colorpal.jpg",
+    links: [
+      {
+        label: "Web Store",
+        url: CHROME_STORE_URL,
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nikosdaridis/colorpal-blazor-browser-extension",
+      },
+      { label: "Website", url: "https://daridis.com/colorpal" },
+    ],
+  },
+  {
+    name: "QR and Barcode mobile App",
+    summary: "QR - Barcode Scanner and Generator Mobile App",
+    techStack: "Maui Blazor, C#, Typescript, Tailwind",
+    image: "/projects/qrbarcodeapp.jpg",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/nikosdaridis/qr-barcode-maui-blazor-hybrid",
+      },
+    ],
+  },
+  {
+    name: "Bybit Trading Bot",
+    summary: "Cryptocurrency trading bot for Bybit Perpetual Futures",
+    techStack: ".NET, C#",
+    image: "/projects/bybittradingbot.jpg",
+    links: [
+      {
+        label: "Website",
+        url: "https://bybit-perpetuals-trading-bot.pages.dev",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/nikosdaridis/bybit-perpetuals-trading-bot",
+      },
+    ],
+  },
+  {
     name: "osrsprices.wiki",
-    summary: "OldSchool Runescape Live GE Prices Utilities",
+    summary: "OldSchool Runescape Live Prices Utilities",
     techStack: "Blazor, C#, Typescript, Tailwind",
-    image: "/portfolio/osrspriceswiki.jpg",
+    image: "/projects/osrspriceswiki.jpg",
     links: [
       { label: "Website", url: "https://osrsprices.wiki" },
       {
@@ -24,54 +69,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "QR & Barcode App",
-    summary: "Maui Blazor Hybrid QR & Barcode Scanner and Generator Mobile App",
-    techStack: "Maui Blazor, C#, Typescript, Tailwind",
-    image: "/portfolio/QRBarcodeApp.jpg",
+    name: "Hattrick.org scraper",
+    summary: "Scraper for Hattrick.org players transfer market",
+    techStack: ".Net, C#, Playwright",
+    image: "/projects/hattrickscraper.jpg",
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/nikosdaridis/qr-barcode-maui-blazor-hybrid",
+        url: "https://github.com/nikosdaridis/hattrick-transfers-scraper",
       },
-    ],
-  },
-  {
-    name: "eBanking",
-    summary:
-      "ASP.NET Core MVC application with Entity Framework Core and Identity",
-    techStack: "C#, JavaScript, HTML, CSS",
-    image: "/portfolio/eBanking.jpg",
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/nikosdaridis/ebanking-asp-net-core",
-      },
-    ],
-  },
-  {
-    name: "ColorPal",
-    summary: "Chrome extension for picking colors and multiple color tools",
-    techStack: "TypeScript, HTML, CSS",
-    image: "/portfolio/ColorPal.jpg",
-    links: [
-      {
-        label: "Web Store",
-        url: CHROME_STORE_URL,
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/nikosdaridis/colorpal",
-      },
-      { label: "Website", url: "https://daridis.com/colorpal" },
     ],
   },
   {
     name: "Portfolio v3",
     summary: "Responsive minimalist portfolio website",
     techStack: "Astro, TypeScript, Tailwind",
-    image: "/portfolio/Portfolio.jpg",
+    image: "/projects/portfolio.jpg",
     links: [
-      { label: "Website", url: "https://daridis.com" },
       {
         label: "GitHub",
         url: "https://github.com/nikosdaridis/nikosdaridis.github.io",
