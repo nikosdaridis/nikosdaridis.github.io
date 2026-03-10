@@ -17,6 +17,6 @@
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0"
+    "@astrojs/sitemap": "^3.7.1"
   }
 }
