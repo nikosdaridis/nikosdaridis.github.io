@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.0",
-    "astro": "^6.0.4",
+    "astro": "^6.0.5",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.2"
   },
