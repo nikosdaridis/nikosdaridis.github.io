@@ -36,6 +36,33 @@ jobs:
             exit 1
           fi
 
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Regenerate lock file
+        working-directory: v3
+        run: npm install --package-lock-only
+
+      - name: Commit lock file if changed
+        run: |
+          if ! git diff --quiet v3/package-lock.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add v3/package-lock.json
+            git commit -m "fix(v3): regenerate lock file after dependency update"
+            git push
+          else
+            echo "Lock file is already in sync, no changes needed."
+          fi
+
       - name: Enable auto-merge for Dependabot PRs
         if: contains(github.event.pull_request.labels.*.name, 'automerge')
         run: gh pr merge --squash --auto "$PR_URL"
