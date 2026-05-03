@@ -1,5 +1,5 @@
 <section id="contact">
-  <h2 class="text-text-bright mb-8 font-mono text-2xl tracking-[-0.02em]">
+  <h2 class="text-text-bright tracking-display mb-8 font-mono text-2xl">
     contact
   </h2>
 
@@ -34,59 +34,60 @@
 </section>
 
 <script is:inline>
-  (function () {
+  (() => {
+    const EMAILJS_SERVICE_ID = "service_csks0d8";
+    const EMAILJS_TEMPLATE_ID = "template_l4aoenf";
+    const EMAILJS_PUBLIC_KEY = "tkKxnFTTTampSyr3G";
+    const EMAILJS_CDN_URL =
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+    const STATUS_HIDE_DELAY_MS = 4000;
+
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
     let emailjsLoaded = false;
 
-    form.addEventListener("submit", function (event) {
+    const loadEmailjs = () =>
+      new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = EMAILJS_CDN_URL;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error("Failed to load EmailJS"));
+        document.head.appendChild(script);
+      });
+
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const submitButton = form.querySelector('button[type="submit"]');
       submitButton.disabled = true;
       submitButton.textContent = "sending...";
 
-      function resetButton() {
+      const resetButton = () => {
         submitButton.disabled = false;
         submitButton.textContent = "send";
-      }
+      };
 
-      function sendForm() {
-        emailjs
-          .sendForm(
-            "service_csks0d8",
-            "template_l4aoenf",
-            form,
-            "tkKxnFTTTampSyr3G",
-          )
-          .then(function () {
-            status.textContent = "message sent successfully";
-            status.className = "text-sm text-green-500 sm:col-span-2";
-            status.classList.remove("hidden");
-            form.reset();
-            resetButton();
-            setTimeout(function () {
-              status.classList.add("hidden");
-            }, 4000);
-          })
-          .catch(function () {
-            status.textContent = "there was an error, try again later";
-            status.className = "text-sm text-red-500 sm:col-span-2";
-            status.classList.remove("hidden");
-            resetButton();
-          });
-      }
-
-      if (emailjsLoaded) {
-        sendForm();
-      } else {
-        const script = document.createElement("script");
-        script.src =
-          "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
-        script.onload = function () {
+      try {
+        if (!emailjsLoaded) {
+          await loadEmailjs();
           emailjsLoaded = true;
-          sendForm();
-        };
-        document.head.appendChild(script);
+        }
+        await emailjs.sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          form,
+          EMAILJS_PUBLIC_KEY,
+        );
+        status.textContent = "message sent successfully";
+        status.className = "text-sm text-green-500 sm:col-span-2";
+        status.classList.remove("hidden");
+        form.reset();
+        resetButton();
+        setTimeout(() => status.classList.add("hidden"), STATUS_HIDE_DELAY_MS);
+      } catch {
+        status.textContent = "there was an error, try again later";
+        status.className = "text-sm text-red-500 sm:col-span-2";
+        status.classList.remove("hidden");
+        resetButton();
       }
     });
   })();

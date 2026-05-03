@@ -26,6 +26,8 @@
   --color-muted: hsl(220, 14%, 55%);
   --color-muted-dark: hsl(220, 11%, 35%);
   --color-accent: hsl(190, 70%, 50%);
+
+  --tracking-display: -0.02em;
 }
 
 @keyframes pin-bounce {
@@ -93,7 +95,7 @@ a:hover {
   height: 1.2em;
 }
 
-.nav-icon-shaft {
+.nav-icon__shaft {
   position: relative;
   display: block;
   width: 1.15em;
@@ -103,7 +105,7 @@ a:hover {
   transition: transform 380ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
 }
 
-.nav-icon-shaft::after {
+.nav-icon__shaft::after {
   content: "";
   position: absolute;
   right: 0px;
@@ -118,12 +120,12 @@ a:hover {
   transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover .nav-icon-shaft {
+.nav-link:hover .nav-icon__shaft {
   transform: translateX(-0.225em) rotate(0deg);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover .nav-icon-shaft::after {
+.nav-link:hover .nav-icon__shaft::after {
   transform: translateY(-50%) rotate(45deg) scale(1);
   transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1) 80ms;
 }
