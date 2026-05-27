@@ -12,7 +12,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "tailwindcss": "^4.2.4",
     "astro": "^6.2.1",
-    "@astrojs/sitemap": "^3.7.2"
+    "@astrojs/sitemap": "^3.7.3"
   },
   "engines": {
     "node": ">=22.0.0"
