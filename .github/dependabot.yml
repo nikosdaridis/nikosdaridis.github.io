@@ -9,3 +9,7 @@ updates:
       - "dependencies"
       - "javascript"
       - "automerge"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
