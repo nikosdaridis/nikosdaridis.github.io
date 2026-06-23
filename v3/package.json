@@ -10,14 +10,11 @@
   "devDependencies": {
     "typescript": "^6.0.3",
     "@tailwindcss/vite": "^4.3.1",
-    "tailwindcss": "^4.2.4",
-    "astro": "^6.4.8",
+    "tailwindcss": "^4.3.1",
+    "astro": "^7.0.0",
     "@astrojs/sitemap": "^3.7.3"
   },
   "engines": {
-    "node": ">=22.0.0"
-  },
-  "overrides": {
-    "vite": "^7"
+    "node": ">=22.12.0"
   }
 }
