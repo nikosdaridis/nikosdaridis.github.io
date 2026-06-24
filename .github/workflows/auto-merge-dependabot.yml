@@ -54,17 +54,18 @@ jobs:
       - name: Commit lock file if changed
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
           if git diff --quiet v3/package-lock.json; then
             echo "Lock file is already in sync, no changes needed."
             exit 0
           fi
 
-          gh api graphql \
+          base64 -w0 v3/package-lock.json | tr -d '\n' | gh api graphql \
             -f repo="$GITHUB_REPOSITORY" \
-            -f branch="${{ github.event.pull_request.head.ref }}" \
+            -f branch="$BRANCH" \
             -f oid="$(git rev-parse HEAD)" \
-            -f contents="$(base64 -w0 v3/package-lock.json)" \
+            -F contents=@- \
             -f message="fix(v3): regenerate lock file after dependency update" \
             -f query='
               mutation($repo: String!, $branch: String!, $oid: GitObjectID!, $contents: Base64String!, $message: String!) {
