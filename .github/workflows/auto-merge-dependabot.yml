@@ -94,4 +94,4 @@ jobs:
             sleep 5
           done
 
-          gh pr merge --squash --auto "$PR_URL"
+          gh pr merge --squash "$PR_URL"
