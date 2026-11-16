@@ -9,10 +9,10 @@
   },
   "devDependencies": {
     "typescript": "^7.0.2",
-    "@tailwindcss/vite": "^4.3.4",
+    "@tailwindcss/vite": "^4.3.5",
     "tailwindcss": "^4.3.1",
-    "astro": "^7.4.5",
-    "@astrojs/sitemap": "^3.7.4"
+    "astro": "^7.4.12",
+    "@astrojs/sitemap": "^3.7.5"
   },
   "engines": {
     "node": ">=22.12.0"
